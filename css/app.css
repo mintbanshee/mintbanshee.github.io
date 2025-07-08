@@ -6,8 +6,8 @@
 }
 body {
   font-size: 1.6em;
-  color: #333;
-  background: #2E2E2E;
+  color: #F9F8F4;
+  background: #1B2E4B;
 }
 header {
   width: 100%;
@@ -28,35 +28,35 @@ nav {
 #about {
   width: 100%;
   height: 500px;
-  background: #4F6752;
+  background: #2C2A4A;
   padding: 50px 100px;
   color: #F9F8F4;
 }
 #skills {
   width: 100%;
   height: 500px;
-  background: #5E5068;
+  background: #3D2C3F;
   padding: 50px 100px;
   color: #F9F8F4;
 }
 #projects {
   width: 100%;
   height: 500px;
-  background: #4F6752;
+  background: #2C2A4A;
   padding: 50px 100px;
   color: #F9F8F4;
 }
 #contact {
   width: 100%;
   height: 500px;
-  background: #5E5068;
+  background: #3D2C3F;
   padding: 50px 100px;
   color: #F9F8F4;
 }
 footer {
   width: 100%;
   height: 200px;
-  background: #2E2E2E;
+  background: #2C2A4A;
   padding-top: 13px;
   text-align: center;
   color: #F9F8F4;
