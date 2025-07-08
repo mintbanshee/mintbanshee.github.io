@@ -4,10 +4,15 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+h1 {
+  color: #F9F8F4
+}
+
 body {
   font-size: 1.6em;
   color: #F9F8F4;
   background: #1B2E4B;
+  padding: 50px 100px;
 }
 header {
   width: 100%;
