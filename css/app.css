@@ -5,7 +5,7 @@
   scroll-behavior: smooth;
 }
 body {
-  font-size: 1.6em;
+  font-size: 1.2em;
   color: #F9F8F4;
   background: #1B2E4B;
 }
@@ -38,40 +38,45 @@ header {
   height: 700px;
   background: url('../assets/images/MoonlitMagicBkg.png');
   padding: 50px 100px;
+  border-bottom: 1px solid #000;
 }
 #about {
   width: 100%;
-  min-height: 500px;
-  background: #2C2A4A;
+  min-height: 600px;
+  background: #0B0A1E;
   padding: 25px;
   color: #F9F8F4;
 }
   #aboutLeft {
     width: 50%;
     float: left;
-    background: #1B2E4B;
+    background: linear-gradient(#1B2E4B, #2C2A4A);
     padding: 25px 50px;
     min-height: 500px;
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
-    border-right: 10px solid #2C2A4A;
+    border-right: 10px solid #0B0A1E;
     border: 1px solid #8DB596;
   }
     #aboutLeft > h1 {
       margin-bottom: 25px;
     }
+    #aboutLeft > p {
+      margin: 15px 0;
+    }
     .bioPic {
-      width: 25%;
+      width: 35%;
       border: 2px solid #fff;
       margin: 25px;
-      border-radius: 80%;
+      border-radius: 50%;
+      box-shadow: 0 4px 18px #111;
       float: left;
-      margin-right: 50px;
+      margin: 25px;
     }
   #aboutRight {
     width: 50%;
     float: left;
-    background: #3A475E;
+    background: linear-gradient(#2C2A4A, #0F1C2E);
     padding: 25px 50px;
     min-height: 500px;
     border-top-right-radius: 22px;
