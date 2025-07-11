@@ -4,8 +4,41 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-body {
+.title {
+  padding: 10px 0px;
+  margin: 25px 0;
+  background: #1B2E4B;
+  border-radius: 8px;
+  border: 2px solid #111;
   font-size: 1.2em;
+}
+.classlist {
+  display: block;
+  width: 100%;
+  height: 250px;
+  align-items: center;
+}
+.icon {
+  width: 50px;
+  margin: 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #000;
+}
+.course {
+  float: left;
+  width: 150px;
+  height: 150px;
+  background: #6b8e6c;
+  border-radius: 16px;
+  border: 3px solid #222;
+  box-shadow: 3px 3px 7px #111;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  margin: 0 21px;
+}
+body {
+  font-size: 1.0em;
   color: #F9F8F4;
   background: #1B2E4B;
 }
@@ -35,9 +68,15 @@ nav {
   }
 header {
   width: 100%;
-  height: 700px;
-  background: url('../assets/images/MoonlitMagicBkg.png');
-  padding: 50px 100px;
+  height: 600px;
+  background: url('../assets/images/HeaderBkg3.png');
+  background-color: #0B0A1E;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 200px;
+  text-align: center;
+  font-size: 1.8em;
+  text-shadow: 3px 3px 7px #777;
   border-bottom: 1px solid #000;
 }
 #about {
@@ -52,7 +91,7 @@ header {
     float: left;
     background: linear-gradient(#1B2E4B, #2C2A4A);
     padding: 25px 50px;
-    min-height: 500px;
+    height: 600px;
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     border-right: 10px solid #0B0A1E;
@@ -78,10 +117,11 @@ header {
     float: left;
     background: linear-gradient(#2C2A4A, #0F1C2E);
     padding: 25px 50px;
-    min-height: 500px;
+    height: 600px;
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
     border: 1px solid #8DB596;
+    text-align: center;
   }
     #aboutRight > h2 {
       margin-bottom: 25px;
