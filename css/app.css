@@ -35,32 +35,39 @@
 }
 .essentialsContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
 }
 .essentialItem {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 90px;
-  margin: 0 10px;
+  max-width: 100px;
+  margin: 0 8px;
+  word-wrap: break-word;
 }
 .essentialItem img {
   display: block;
-  margin: 0 auto 8px;
-  width: 64px;
-  height: auto !important;
+  margin: 0 auto 6px;
+  margin-bottom: 8px;
+  width: 60px;
+  height: 60px !important;
+  object-fit: contain;
 }
 .essentialItem p {
-  font-size: 1em;
+  font-size: 0.8em;
   color: #DCDCDC;
   text-align: center;
+  line-height: 1.1;
+  margin: 0;
+  white-space: nowrap;
 }
 .tumbler {
   width: 100px;
