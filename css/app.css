@@ -167,7 +167,7 @@ header {
     float: left;
     background: linear-gradient(#1B2E4B, #2C2A4A);
     padding: 25px 50px;
-    height: 750px;
+    height: 800px;
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     border-right: 10px solid #0B0A1E;
@@ -200,8 +200,8 @@ header {
     width: 50%;
     float: left;
     background: linear-gradient(#2C2A4A, #0F1C2E);
-    padding: 75px 50px;
-    height: 750px;
+    padding: 30px 40px;
+    height: 800px;
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
     border: 1px solid #8DB596;
@@ -210,6 +210,86 @@ header {
     #aboutRight > h2 {
       margin-bottom: 25px;
     }
+.toolbelt h3,
+.toolbelt h4 {
+  margin-top: 1.5rem;
+  color: #333;
+}
+
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pill {
+  background: linear-gradient(to right, #d8f3dc, #b7e4c7);
+  color: #1b4332;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: 1px solid #95d5b2;
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* About Right Section Text Fix */
+#aboutRight h2,
+#aboutRight h3,
+#aboutRight h4,
+#aboutRight p {
+  color: #F5F3FF;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* More spacing between sections */
+#aboutRight h3 {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1.5;
+  font-size: 1rem;
+}
+
+#aboutRight h4 {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+#aboutRight h4::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(to right, #caffbf, #bdb2ff, #ffc6ff);
+  border-radius: 10px;
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
+}
+/* Override original dark h3/h4 styles for toolbelt */
+.toolbelt h3,
+.toolbelt h4 {
+  color: #F5F3FF !important;
+}
+
+/* Optional subtle divider between groups */
+.toolbelt hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0;
+}
+
+
 .read-more-link {
   display: inline-block;
   margin-top: 1rem;
