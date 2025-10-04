@@ -425,6 +425,87 @@ header {
   border-radius: 10px;
 }
 
+.mockup-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.laptop {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05),
+              0 0 40px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.laptop:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(174, 238, 255, 0.4);
+}
+
+.mobile {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05),
+              0 0 40px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.mobile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(174, 238, 255, 0.4);
+}
+
+.webartboard {
+  display: block;
+  max-width: 300px;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05),
+              0 0 40px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.webartboard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(174, 238, 255, 0.4);
+}
+
+.mobileartboard {
+  max-width: 190px;
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05),
+              0 0 40px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  flex: 1 1 280px;
+}
+
+.mobileartboard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(174, 238, 255, 0.4);
+}
+
+.artboard-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;           /* smaller space between images */
+  padding: 1rem 1rem;  /* reduce padding if needed */
+  max-width: 1200px;   /* optional: centers better */
+  margin: 0 auto;
+}
 
 footer {
   text-align: center;

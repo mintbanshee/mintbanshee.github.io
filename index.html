@@ -7,68 +7,73 @@
   <title>My Portfolio</title>
 </head>
 <body>
-  <nav>
-    <a href="#about" title="about">About</a>
-    <a href="skills" title="skills">Skills</a>
-    <a href="projects" title="projects">Projects</a>
-    <a href="contact" title="contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#about" title="About">About</a>
+  <a href="#codingprojects" title="Coding Projects">Coding Projects</a>
+  <a href="#designprojects" title="Design Projects">Design Projects</a>
+  <a href="#contact" title="Contact">Contact</a>
+</nav>
   <header>
     <h1>Welcome to My Cozy Portfolio</h1>
   </header>
-  <div id="about">
-    <div id="aboutLeft">
-  <div class="bioPicWrapper">
-  <img src="assets/images/NewBioPic.jpg" class="bioPic">
-  </div>
-  <h1>Alexandria McQueen</h1>
-  <p class="subtitle">aka MintBanshee · Web & App Dev Student</p>
-  <p class="mini-bio">
-    I’m a creative and dedicated student in the Web & App Development diploma program at triOS College, currently maintaining a 100% GPA. With a background in intuitive UI design and a passion for thoughtful, cozy code, I love bringing digital spaces to life with intention and care.
-</p>
+ <section id="about" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+  <div id="aboutLeft">
+    <div class="bioPicWrapper">
+      <img src="assets/images/NewBioPic.jpg" class="bioPic">
+    </div>
+    <h1>Alexandria McQueen</h1>
+    <p class="subtitle">aka MintBanshee · Web & App Dev Student</p>
+    <p class="mini-bio">
+      I’m a creative and dedicated student in the Web & App Development diploma program at triOS College, currently maintaining a 100% GPA. With a background in intuitive UI design and a passion for thoughtful, cozy code, I love bringing digital spaces to life with intention and care.
+    </p>
     <br>I’m currently learning Java and Swift, with full-stack goals on the horizon — and I’m actively seeking a Summer 2026 internship opportunity where I can grow, contribute, and collaborate.
-  </p>
-  <div class="quick-tags">
-    <span class="tag">Front-End Focused</span>
-    <span class="tag">Java Enthusiast</span>
-    <span class="tag">UX-Minded</span>
-  </div>
+    <div class="quick-tags">
+      <span class="tag">Front-End Focused</span>
+      <span class="tag">Java Enthusiast</span>
+      <span class="tag">UX-Minded</span>
+    </div>
   </div>   
+
   <div id="aboutRight">
-  <section class="skills-panel">
-    <div class="toolbelt">
-    <h4>🛠️ Developer Toolbelt 🛠️</h4>
-    <br>
-    <div class="pill-group">
-      <span class="pill">Java ☕</span>
-      <span class="pill">Swift 🐦</span>
-      <span class="pill">GitHub 🐙</span>
-      <span class="pill">VS Code 💙</span>
-      <span class="pill">Terminal 🖤</span>
-      <span class="pill">UI/UX (Adobe XD) 🩵</span>
-    </div>
+    <section class="skills-panel">
+      <div class="toolbelt">
+        <h4>🛠️ Developer Toolbelt 🛠️</h4>
+        <br>
+        <div class="pill-group">
+          <span class="pill">Java ☕</span>
+          <span class="pill">Swift 🐦</span>
+          <span class="pill">GitHub 🐙</span>
+          <span class="pill">VS Code 💙</span>
+          <span class="pill">Terminal 🖤</span>
+          <span class="pill">UI/UX (Adobe XD) 🩵</span>
+        </div>
 
-    <h4>📚 Currently Learning 📚</h4>
-    <br>
-    <div class="pill-group">
-      <span class="pill">Photoshop 🖼️</span>
-      <span class="pill">Illustrator 🎨</span>
-    </div>
+        <h4>📚 Currently Learning 📚</h4>
+        <br>
+        <div class="pill-group">
+          <span class="pill">Photoshop 🖼️</span>
+          <span class="pill">Illustrator 🎨</span>
+        </div>
 
-    <h4>⏳ Coming Soon ⏳</h4>
-    <br>
-    <div class="pill-group">
-      <span class="pill">HTML/CSS/JS 🌐</span>
-      <span class="pill">React ⚛️</span>
-      <span class="pill">PHP & MySQL 🐘🗃️</span>
-      <span class="pill">WordPress 📝</span>
-      <span class="pill">Linux Hosting 🧪</span>
-      <span class="pill">Angular 🧭</span>
-    </div>
+        <h4>⏳ Coming Soon ⏳</h4>
+        <br>
+        <div class="pill-group">
+          <span class="pill">HTML/CSS/JS 🌐</span>
+          <span class="pill">React ⚛️</span>
+          <span class="pill">PHP & MySQL 🐘🗃️</span>
+          <span class="pill">WordPress 📝</span>
+          <span class="pill">Linux Hosting 🧪</span>
+          <span class="pill">Angular 🧭</span>
+        </div>
+      </div>
+    </section>
   </div>
-  </section>
+</section>
+
 </div>
-<section id="projects" style="margin-top: 4rem; padding: 2rem; background: linear-gradient(to bottom, #1c1b2e, #2b2944); border: 2px solid #8a8dad; border-radius: 16px; box-shadow: 0 0 12px #8a8dad; color: #f5f5f5;">
+<section id="codingprojects"
+  style="scroll-margin-top: 120px; margin-top: 4rem; padding: 2rem; background: linear-gradient(to bottom, #1c1b2e, #2b2944); border: 2px solid #8a8dad; border-radius: 16px; box-shadow: 0 0 12px #8a8dad; color: #f5f5f5;">
+
 <h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; text-shadow: 0 0 6px #e2e2ff;">✨ Projects ✨</h2>
 
 
@@ -155,6 +160,38 @@ A cozy CLI app to help you steep the perfect cup! This Java project prompts the 
 </div>
 </section>
 
+<section id="designprojects" style="margin-top: 8rem; padding: 2rem; background: linear-gradient(to bottom, #1c1b2e, #2b2944); border: 2px solid #8a8dad; border-radius: 16px; box-shadow: 0 0 12px #8a8dad; color: #f5f5f5;">
+  <h2 style="text-align: center; font-size: 2rem; color: #fdfdfd;">✨ Design Projects ✨</h2>
+
+  <div style="margin-top: 2rem; text-align: center;">
+    <h3 style="font-size: 1.25rem; color: #bcd9ff;">🎨 Scribe’s Haven</h3>
+    <p>A dreamy café-bookstore UI/UX concept with layered aesthetics and a touch of nostalgia. Created using Adobe XD during the UI/UX module.</p>
+    <div class="pill-group" style="margin: 1rem 0;">
+      <span class="pill">UI/UX</span>
+      <span class="pill">Adobe XD</span>
+      <span class="pill">Mockup</span>
+    </div>
+    <a href="#" target="_blank" class="view-button">🔍 View Design</a>
+  </div>
+<br><br>
+<div class="mockup-row">
+  <img src="assets/images/Scribes_Haven_Laptop.png" alt="Laptop view" class="laptop">
+  <img src="assets/images/Scribe_Haven_Mobile.png" alt="Mobile view" class="mobile">
+</div>
+
+<div class="artboard-row">
+  <img src="assets/images/Scribe’s Haven.png" alt="Laptop view" class="webartboard">
+  <img src="assets/images/Book Menu.png" alt="Mobile view" class="webartboard">
+</div>
+
+<div class="artboard-row">
+  <img src="assets/images/Home.png" alt="Laptop view" class="mobileartboard">
+  <img src="assets/images/Genres.png" alt="Mobile view" class="mobileartboard">
+  <img src="assets/images/Home Menu.png" alt="Mobile view" class="mobileartboard">
+</div>
+
+  <!-- You can duplicate this whole block below for each additional project -->
+</section>
 
 
 
