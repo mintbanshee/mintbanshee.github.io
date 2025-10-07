@@ -167,7 +167,7 @@ header {
     float: left;
     background: linear-gradient(#1B2E4B, #2C2A4A);
     padding: 25px 50px;
-    height: 800px;
+    height: auto;
     border-top-left-radius: 22px;
     border-bottom-left-radius: 22px;
     border-right: 10px solid #0B0A1E;
@@ -201,7 +201,7 @@ header {
     float: left;
     background: linear-gradient(#2C2A4A, #0F1C2E);
     padding: 30px 40px;
-    height: 800px;
+    height: auto;
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
     border: 1px solid #8DB596;
@@ -532,6 +532,15 @@ header {
   padding: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.design-preview {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.design-preview:hover {
+  transform: scale(1.05);
 }
 
 footer {
