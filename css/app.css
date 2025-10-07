@@ -436,6 +436,13 @@ header {
     padding: 0 10px;
   }
 }
+@media screen and (max-width: 768px) {
+  .project-blurb p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
+
 
 .screenshot-pair {
   display: flex;
