@@ -12,12 +12,7 @@
   border: 2px solid #111;
   font-size: 1.2em;
 }
-.classlist {
-  display: block;
-  width: 100%;
-  height: 250px;
-  align-items: center;
-}
+
 .icon {
   width: 50px;
   margin: 10px;
@@ -85,19 +80,7 @@
   margin: 8px;
   padding-bottom: 8px;
 }
-.course {
-  float: left;
-  width: 150px;
-  height: 150px;
-  background: #6b8e6c;
-  border-radius: 16px;
-  border: 3px solid #222;
-  box-shadow: 3px 3px 7px #111;
-  cursor: pointer;
-  text-align: center;
-  padding: 10px;
-  margin: 0 21px;
-}
+
 body {
   font-size: 1.0em;
   color: #F9F8F4;
@@ -559,14 +542,54 @@ header {
   margin: 0 auto;
 }
 
-.design-preview {
-  transition: transform 0.3s ease;
-  cursor: pointer;
+/* --- Design Projects Section --- */
+#designprojects {
+  margin-bottom: 4rem;    /* adds space below */
+  padding-bottom: 2rem;   /* softens the bottom edge */
+  background: linear-gradient(to bottom, #1c1b2e, #2b2944);
+  border: 2px solid #8a8dad;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #8a8dad;
+  color: #f5f5f5;
 }
 
-.design-preview:hover {
-  transform: scale(1.05);
+
+/* --- Logo Gallery Enhancements --- */
+.logo-subsection {
+  background: linear-gradient(to bottom, #2b2944, #1c1b2e);
+  border: 2px solid #8a8dad;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 0 15px rgba(138, 141, 173, 0.5);
 }
+
+.logo-subsection h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fdfdfd;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.logo-subsection .project-title {
+  color: #d3d6f0;
+  font-size: 1.4rem;
+}
+
+.logo-subsection .mockup-row img {
+  max-width: 450px;
+  margin: 0 auto;
+}
+.logo-card {
+  background-color: #2f2d4a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 6px #aaaaff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 
 footer {
   text-align: center;
