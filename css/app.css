@@ -441,6 +441,12 @@ header {
     padding: 0 10px;
   }
 }
+.project-blurb p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
 @media screen and (max-width: 768px) {
   .project-blurb p {
     font-size: 0.95rem;
