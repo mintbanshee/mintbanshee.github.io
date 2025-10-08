@@ -16,7 +16,7 @@
   <header>
     <h1>Welcome to My Cozy Portfolio</h1>
   </header>
- <section id="about" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+ <section id="about">
   <div id="aboutLeft">
     <div class="bioPicWrapper">
       <img src="assets/images/NewBioPic.jpg" class="bioPic">
@@ -64,28 +64,27 @@
           <span class="pill">WordPress 📝</span>
           <span class="pill">Linux Hosting 🧪</span>
           <span class="pill">Angular 🧭</span>
-        </div>
-      </div>
-    </section>
-  </div>
-</section>
+        </div> 
 
-</div>
-<section id="codingprojects"
-  style="scroll-margin-top: 120px; margin-top: 4rem; padding: 2rem; background: linear-gradient(to bottom, #1c1b2e, #2b2944); border: 2px solid #8a8dad; border-radius: 16px; box-shadow: 0 0 12px #8a8dad; color: #f5f5f5;">
+      </div> <!-- toolbelt -->
+    </section> <!-- skils -->
+  </div>  <!-- about right -->
+</section> <!-- about -->
 
-<h2 style="text-align: center; font-size: 2rem; margin-bottom: 2rem; text-shadow: 0 0 6px #e2e2ff;">✨ Coding Projects ✨</h2>
-<h2 style="text-align: center; font-size: 1rem; margin-bottom: 2rem;">Please click the link under the features 'pills' to view the GitHub repo for each project</h2>
+<section id="codingprojects" class="project-section">
+<h2>✨ Coding Projects ✨</h2>
+<h3 class="section-subtitle">Please click the link under the features 'pills' to view the GitHub repo for each project</h3>
 
-<div style="display: flex; flex-direction: column; gap: 2rem;">
+<div class="project-container">
 
 <!-- Project 1 -->
-<div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center;">
+<div class="project-card">
   <h3 class="project-title">🌿 Dewdrop Defenders</h3><br>
  <div class="project-blurb">
   <p>A cozy turn-based Java game featuring defenders, weather effects, and custom enemy logic. Inspired by Stardew vibes!</p>
  </div><br>
-<div style="margin: 0.5rem 0;">
+
+<div class="pill-group">
   <span class="pill">Java</span>
   <span class="pill">OOP</span>
   <span class="pill">Game Dev</span>
@@ -115,13 +114,14 @@
 </div>
 
 <!-- Project 2 -->
-<div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center;">
+<div class="project-card">
 <h3 class="project-title">🌱 Sprout</h3><br>
 <div class="project-blurb">
   <p>A Java CLI tool, created with the assistance of AI as part of my course assignments.  
   It scaffolds GitHub repos and generates README and Wiki files.</p>
 </div><br>
-<div style="margin: 0.5rem 0;">
+
+<div class="pill-group">
   <span class="pill">Java</span>
   <span class="pill">OOP</span>
   <span class="pill">CLI</span>
@@ -141,12 +141,13 @@
 </div>
 
 <!-- Project 3 -->
-<div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center;">
+<div class="project-card">
 <h3 class="project-title">☕ Cozy Brew Timer</h3><br>
 <div class="project-blurb">
 <p>A cozy CLI app to help you steep the perfect cup! This Java project prompts the user for their tea type, then returns the ideal temperature and steep time,<br>with an option to brew another cup. Features soft logic, replay loops, and cozy vibes.
 </p><br>
-<div style="margin: 0.5rem 0;">
+
+<div class="pill-group">
   <span class="pill">Java</span>
   <span class="pill">Tea Tech</span>
   <span class="pill">CLI</span>
@@ -168,17 +169,21 @@
 </section>
 
 
-<section id="designprojects" style="margin-top: 8rem; padding: 2rem; background: linear-gradient(to bottom, #1c1b2e, #2b2944); border: 2px solid #8a8dad; border-radius: 16px; box-shadow: 0 0 12px #8a8dad; color: #f5f5f5;">
-  <h2 style="text-align: center; font-size: 2rem; color: #fdfdfd;">✨ Design Projects ✨</h2><br>
-  <h2 style="text-align: center; font-size: 1rem; margin-bottom: 2rem;">Please click the link under the features 'pills' to view the functioning Adobe XD preview for each project</h2>
+<section id="designprojects" class="project-section">
+  <h2>✨ Design Projects ✨</h2>
+  <h3 class="section-subtitle">Please click the link under the features 'pills' to view the functioning Adobe XD preview for each project</h3>
 <br>
+
+<div class="project-container">
+
 <!-- Project 1 -->
-  <div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center; margin-bottom: 2rem;">
-    <h3 class="project-title">🎨 Scribe’s Haven</h3><br>
-    <div class="project-blurb">
+   <div class="project-card">
+      <h3 class="project-title">🎨 Scribe’s Haven</h3>
+      <div class="project-blurb">
     <p>A dreamy café-bookstore concept built with layered aesthetics and nostalgic vibes.<br>This desktop & mobile UI/UX mockup features fully working navigation and soft animated transitions. Created in Adobe XD during the UI/UX module.</p>
     </div><br>
-    <div class="pill-group" style="margin: 1rem 0;">
+
+    <div class="pill-group">
       <span class="pill">UI/UX</span>
       <span class="pill">Adobe XD</span>
       <span class="pill">Mockup</span>
@@ -206,12 +211,13 @@
 </div>
 
 <!-- Project 2 -->
-  <div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center; margin-bottom: 2rem;">
-    <h3 class="project-title">🌿 BotaniCute</h3><br>
-  <div class="project-blurb">
+ <div class="project-card">
+      <h3 class="project-title">🌿 BotaniCute</h3><br>
+      <div class="project-blurb">
     <p>A heartwarming plant care companion app designed for a cozy little plant shop that truly cares.<br>BotaniCute helps customers nurture their plant babies with love, share decor inspiration, and connect with a like-minded community.<br>Encouraging users to care, connect, and celebrate their plant journeys 🌿💚</p> <br> <p>Created in Adobe XD during the UI/UX module, the prototype features fully working navigation and animated transitions to bring its cozy charm to life.</p>
   </div><br>
-    <div class="pill-group" style="margin: 1rem 0;">
+
+    <div class="pill-group">
       <span class="pill">UI/UX</span>
       <span class="pill">Adobe XD</span>
       <span class="pill">Mobile App</span>
@@ -240,12 +246,13 @@
 </div>
 
 <!-- Project 3 -->
-  <div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center; margin-bottom: 2rem;">
-    <h3 class="project-title">🎀 Sailor Moon</h3><br>
+  <div class="project-card">
+      <h3 class="project-title">🎀 Sailor Moon</h3><br>
     <div class="project-blurb">
     <p>A fan-made Sailor Moon concept site designed to celebrate magical girl nostalgia with crisp layout and themed visuals.<br>Built in Adobe XD, this prototype includes animated page transitions and fully functional navigation.</p>
     </div><br>
-    <div class="pill-group" style="margin: 1rem 0;">
+
+    <div class="pill-group">
       <span class="pill">UI/UX</span>
       <span class="pill">Adobe XD</span>
       <span class="pill">Concept Site</span>
@@ -266,14 +273,15 @@
 </div>
 
 <!-- Project 4 -->
-  <div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center; margin-bottom: 2rem;">
-    <h3 class="project-title">🌌 Star Wars</h3><br>
+  <div class="project-card">
+      <h3 class="project-title">🌌 Star Wars</h3><br>
     <div class="project-blurb">
     <p>A themed layout concept designed during the Photoshop module, inspired by the Star Wars universe and the visual tone of Rogue One.<br>This project focused on layering, visual balance, and creating a cinematic feel using provided assets.</p>
     <br>
     <p>The design features strong grid structure, atmospheric imagery, and character-driven emphasis to reflect the rebellion’s story arc.</p>
     </div><br>    
-    <div class="pill-group" style="margin: 1rem 0;">
+
+    <div class="pill-group">
       <span class="pill">Photoshop</span>
       <span class="pill">Custom Layout</span>
       <span class="pill">Fandom-Based Concept</span>
@@ -290,14 +298,15 @@
 </div>
 
 <!-- Project 5 -->
-  <div style="background-color: #2f2d4a; padding: 1.5rem; border-radius: 12px; box-shadow: 0 0 6px #aaaaff; text-align: center; margin-bottom: 2rem;">
-    <h3 class="project-title">👩‍💻 Cozy Pixel</h3><br>
+  <div class="project-card">
+      <h3 class="project-title">👩‍💻 Cozy Pixel</h3><br>
     <div class="project-blurb">
     <p>Cozy Pixel was born from a love of design, code, and the cozy rituals that fuel creativity — like coffee once sipped from a beloved pixel heart tumbler, now retired but never forgotten.</p>
     <br>
     <p>This Photoshop assignment challenged me to design a full scrollable homepage using only the provided assets.<br>I blended clean layout structure with cozy aesthetics and pixel-style illustrations to reflect a fictional design studio with heart.</p>
   </div><br>
-    <div class="pill-group" style="margin: 1rem 0;">
+
+    <div class="pill-group">
       <span class="pill">Photoshop</span>
       <span class="pill">Custom Assets</span>
       <span class="pill">Layer Groups</span>
@@ -316,7 +325,7 @@
 </section>
 
 <!-- Logo Projects (clean version) -->
-<div class="logo-subsection">
+<section id="logoprojects" class="project-section logo-subsection">
   <h2>✨ Logo Projects ✨</h2>
 
   <!-- Project 1 -->
@@ -411,7 +420,7 @@
           </div>
           <div class="essentialItem">
             <img src="assets/images/Earbuds.png" alt="earbuds" class="earbuds">
-            <p>Lo-fi Beats</p>
+            <p>Boppable Beats</p>
           </div>
           <div class="essentialItem">
             <img src="assets/images/CandyBowl.png" alt="bowl of candy" class="candy">
@@ -419,7 +428,7 @@
           </div>
         </div>
       </div>
-    </div>
+
   </footer>
 </body>
 </html>

@@ -144,6 +144,9 @@ header {
   background: #0B0A1E;
   padding: 25px;
   color: #F9F8F4;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
   #aboutLeft {
     width: 50%;
@@ -350,6 +353,51 @@ header {
   background-color: #4d5672;
 }
 
+/* --- Reusable Project Sections --- */
+.project-section {
+  padding: 2rem;
+  border: 2px solid #8a8dad;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #8a8dad;
+  color: #f5f5f5;
+  background: linear-gradient(to bottom, #1c1b2e, #2b2944);
+  margin-top: 4rem;
+  scroll-margin-top: 120px;
+}
+
+.project-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 6px #e2e2ff;
+  color: #fdfdfd;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+  font-weight: 400;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* --- Individual Project Cards --- */
+.project-card {
+  background-color: #2f2d4a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 6px #aaaaff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
 .screenshot-row {
   display: flex;
   flex-wrap: wrap;
@@ -555,13 +603,11 @@ header {
 
 
 /* --- Logo Gallery Enhancements --- */
+/* --- Logo Projects Section --- */
 .logo-subsection {
   background: linear-gradient(to bottom, #2b2944, #1c1b2e);
-  border: 2px solid #8a8dad;
-  border-radius: 16px;
-  padding: 2rem;
-  margin-top: 3rem;
   box-shadow: 0 0 15px rgba(138, 141, 173, 0.5);
+  margin-top: 3rem; /* adds breathing room after design section */
 }
 
 .logo-subsection h2 {
@@ -570,6 +616,15 @@ header {
   color: #fdfdfd;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
   margin-bottom: 1.5rem;
+}
+
+.logo-card {
+  background-color: #2f2d4a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 6px #aaaaff;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .logo-subsection .project-title {
@@ -581,13 +636,62 @@ header {
   max-width: 450px;
   margin: 0 auto;
 }
-.logo-card {
-  background-color: #2f2d4a;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 6px #aaaaff;
-  text-align: center;
-  margin-bottom: 2rem;
+
+/* ===========================
+   📱 Responsive Typography
+   =========================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p, li, span, a {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .mini-bio {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .project-blurb p {
+    font-size: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  p, span, a { font-size: 0.9rem; }
+}
+@media (max-width: 768px) {
+  nav {
+    height: 60px;
+    padding-top: 8px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 
