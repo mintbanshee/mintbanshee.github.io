@@ -694,6 +694,74 @@ header {
   }
 }
 
+/* 🌿 Contact Section */
+.contact-section {
+  background: linear-gradient(to bottom, #1c1b2e, #2b2944);
+  border: 2px solid #8a8dad;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(138, 141, 173, 0.5);
+  padding: 3rem 2rem;
+  margin-top: 5rem;
+  text-align: center;
+  color: #fdfdfd;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #fdfdfd;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #d3d6f0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #2f2d4a;
+  color: #fdfdfd;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 0 6px #aaaaff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #46437a;
+  transform: translateY(-3px);
+}
+
+/* 🌸 Mobile */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem;
+  }
+
+  .contact-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+  }
+}
+
 
 footer {
   text-align: center;
