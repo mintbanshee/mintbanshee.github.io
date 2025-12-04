@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/app.js"></script>
+  <script src="js/jquery.js"></script>
+  <title>MintBanshee's Portfolio</title>
+</head>
+<body>
+    <div id="socials">
+    <a href="index.html">
+    <img id="navLogo" src="assets/images/shell/logoBlack.png" alt="logo - home link">
+    </a>
+    <a href="mailto:mintbanshee@gmail.com">
+    <img id="navEmail" src="assets/images/shell/email-black.png" alt="Email">
+    </a>
+  </div>
+  <div id="burgerMenu" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+<nav>
+  <a href="index.html" class="parisienne-regular">home</a>
+  <a href="about.html" class="parisienne-regular">about</a>
+  <a href="projects.html" class="parisienne-regular">projects</a>
+  <a href="contact.html" class="parisienne-regular">contact</a>
+</nav>
+<header>
+    <div id="logo">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <img id="logoIMG" src="assets/images/shell/logoMint.png" alt="logo">
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+  </header>
+
+  <div id="codingMain">
+    <div class="codeCard">
+      <h1>Dewdrop Defenders</h1>
+      <h2>Java Project</h2>
+      <p>Dewdrop Defenders: A turn-based command-line game built with Java emphasizing robust Object-Oriented Design (OOD) principles.</p>
+      <p>The application demonstrates mastery of complex class hierarchies and efficient state management, including a one-time, HP-triggered special ability to implement intricate business logic and maintain clean, scalable back-end code.</p>
+      <div class="projectSkillsRow">
+        <span>Java</span>
+        <span>OOP</span>
+        <span>GameDev</span>
+        <span>VS Code</span>
+        <span>GitHub</span>
+      </div>
+      <div class="projectMedia">
+        <img class="codeThumb" src="assets/images/coding/dewdropDefenders/Attacks.png" alt="Dewdrop Defenders Attacks Screenshot">
+        <img class="codeThumb" src="assets/images/coding/dewdropDefenders/DewDrop_Defenders_Ink.png" alt="Dewdrop Defenders Code Screenshot">
+        <video autoplay muted loop playsinline controls width="100%">
+          <source src="assets/video/DewdropDefendersGameplay.mov" type="video/mp4" alt="Video of Dewdrop Defenders Gameplay">
+          Your browser does not support the video tag.</video>
+      </div>
+      <a href="https://github.com/mintbanshee/Java_Assignment_3" class="projectLink" target="_blank">View the Repo</a>
+      </div>
+
+    <div class="codeCard">
+      <h1>Sprout</h1>
+      <h2>CLI</h2>
+      <p>A utility concept that I designed to automate developer setup (repo scaffolding, README/Wiki generation).</p>
+      <p>This project showcases my proficiency in Requirements Engineering—translating complex workflow needs into precise specifications for AI-assisted code generation. The utility demonstrates strong conceptual design of automation logic and application design for AI services.</p>
+      <div class="projectSkillsRow">
+        <span>Java</span>
+        <span>OOP</span>
+        <span>I/O Handling</span>
+        <span>VS Code</span>
+        <span>GitHub</span>
+        <span>Requirements Engineering</span>
+        <span>Application Design for AI Services</span>
+        <span>Workflow Automation</span>
+      </div>
+      <div class="projectMedia">
+        <img class="codeThumb" src="assets/images/coding/sprout/Sprout_Template_and_Repo.png" alt="Screenshot of Sprout CLI Running">
+        <img class="codeThumb" src="assets/images/coding/sprout/Sprout_Help.png" alt="Screenshot of Sprout's Help Menu">
+        <video autoplay muted loop playsinline controls width="100%">
+          <source src="assets/video/Sprout_Video.mov" type="video/mp4" alt="Video of Sprout Running">
+          Your browser does not support the video tag. </video>
+      </div>
+      <a href="https://github.com/mintbanshee/Sprout_App" class="projectLink" target="_blank">View the Repo</a>
+      </div>
+
+<div class="codeCard">
+      <h1>CozyBrew Timer</h1>
+      <h2>Java Practice</h2>
+      <p>A practical Java Command Line Interface (CLI) utility designed to return optimal steep times and temperatures for various tea types.</p>
+      <p>This project demonstrates strong Java fundamentals, including robust I/O handling, switch case logic for customized output, and efficient looping to enhance user interaction and practical usability.</p>
+      <div class="projectSkillsRow">
+        <span>Java Fundamentals</span>
+        <span>Control Flow Logic</span>
+        <span>I/O Handling</span>
+        <span>VS Code</span>
+        <span>GitHub</span>
+        <span>Looping & User Experience</span>
+      </div>
+      <div class="projectMedia">
+        <img class="codeThumb" src="assets/images/coding/cozyBrew/CozyBrew.png" alt="Screenshot of CozyBrew">
+        <img class="codeThumb" src="assets/images/coding/cozyBrew/CozyBrew_Coding.png" alt="Screenshot of CozyBrew's Code">
+        <video autoplay muted loop playsinline controls width="100%">
+          <source src="assets/video/CozyBrewVideo.mov" type="video/mp4" alt="Video of CozyBrew Running">
+          Your browser does not support the video tag. </video>
+      </div>
+      <a href="https://github.com/mintbanshee/CozyBrew" class="projectLink" target="_blank">View the Repo</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <footer>
+    <div id="footerSocials">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <a href="mailto:mintbanshee@gmail.com">
+        <img id="social" src="assets/images/shell/email-black.png" alt="Email"></a>
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+    <div id="footerText">
+      &copy; 2025 Alexandria McQueen — MintBanshee
+      <br>Crafted with care in VS Code
+    </div>
+  </footer>
+
+</body>
+</html>

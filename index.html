@@ -3,447 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="css/app.css">
-  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/app.js"></script>
+  <script src="js/jquery.js"></script>
+  <title>MintBanshee's Portfolio</title>
 </head>
 <body>
+    <div id="socials">
+    <a href="index.html">
+    <img id="navLogo" src="assets/images/shell/logoBlack.png" alt="logo - home link">
+    </a>
+    <a href="mailto:mintbanshee@gmail.com">
+    <img id="navEmail" src="assets/images/shell/email-black.png" alt="Email">
+    </a>
+  </div>
+  <div id="burgerMenu" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
 <nav>
-  <a href="#about" title="About">About</a>
-  <a href="#codingprojects" title="Coding Projects">Coding Projects</a>
-  <a href="#designprojects" title="Design Projects">Design Projects</a>
-  <a href="#contact" title="Contact">Contact</a>
+  <a href="index.html" class="parisienne-regular">home</a>
+  <a href="about.html" class="parisienne-regular">about</a>
+  <a href="projects.html" class="parisienne-regular">projects</a>
+  <a href="contact.html" class="parisienne-regular">contact</a>
 </nav>
-  <header>
-    <h1>Welcome to My Cozy Portfolio</h1>
+<header>
+    <div id="logo">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <img id="logoIMG" src="assets/images/shell/logoMint.png" alt="logo">
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
   </header>
- <section id="about">
-  <div id="aboutLeft">
-    <div class="bioPicWrapper">
-      <img src="assets/images/NewBioPic.jpg" class="bioPic">
+
+  <div id="welcome">
+    <h1>MintBanshee — Alexandria McQueen</h1>
+    <div class="dividerFlair">~ ✧ ~</div>
+    <h1>Emerging Front-End Developer & UI Designer</h1>
+    <h1>with a growing passion for Java</h1>
+    <h2>Crafting clean, thoughtful interfaces with a touch of magic.</h2>
+    <h3>Blending design, code, and cozy user experiences.</h3>
+    <p>I’m a developer and designer who loves intuitive layouts, soft visuals, and clean, well-structured code.
+        My work blends aesthetics with logic to create digital experiences that feel calm, usable, and welcoming.</p>
+    <p>I enjoy bringing interfaces to life through thoughtful HTML, CSS, and JavaScript, with a particular love for Java and front-end UI design. Whether I’m building a polished website, refining a layout, or creating a custom digital tool, my goal is always the same: clarity, beauty, and ease of use.</p>
+    <div id="skillsRow">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Responsive Design</span>
+      <span>Angular</span>
+      <span>React</span>
     </div>
-    <h1>Alexandria McQueen</h1>
-    <p class="subtitle">aka MintBanshee · Web & App Dev Student</p>
-    <p class="mini-bio">
-      I’m a creative and dedicated student in the Web & App Development diploma program at triOS College, currently maintaining a 100% GPA. With a background in intuitive UI design and a passion for thoughtful, cozy code, I love bringing digital spaces to life with intention and care.
-    </p>
-    <br>I’m currently learning Java and Swift, with full-stack goals on the horizon — and I’m actively seeking a Summer 2026 internship opportunity where I can grow, contribute, and collaborate.
-    <div class="quick-tags">
-      <span class="tag">Front-End Focused</span>
-      <span class="tag">Java Enthusiast</span>
-      <span class="tag">UX-Minded</span>
+    <div id="skillsRow">
+      <span>Java</span>
+      <span>Object-Oriented Programming (OOP)</span>
+      <span>MySQL (Database)</span>
     </div>
-  </div>   
-
-  <div id="aboutRight">
-    <section class="skills-panel">
-      <div class="toolbelt">
-        <h4>🛠️ Developer Toolbelt 🛠️</h4>
-        <br>
-        <div class="pill-group">
-          <span class="pill">Java ☕</span>
-          <span class="pill">Swift 🐦</span>
-          <span class="pill">GitHub 🐙</span>
-          <span class="pill">VS Code 💙</span>
-          <span class="pill">Terminal 🖤</span>
-          <span class="pill">UI/UX (Adobe XD) 🩵</span>
-          </div>
-          <div class="pill-group"></div>
-          <span class="pill">Photoshop 🖼️</span>
-          <span class="pill">Illustrator 🎨</span>
-        </div>
-        <br>
-        <h4>📚 Currently Learning 📚</h4>
-        <br>
-        <div class="pill-group">
-          <span class="pill">HTML/CSS/JS 🌐</span> 
-        </div>
-
-        <h4>⏳ Coming Soon ⏳</h4>
-        <br>
-        <div class="pill-group">
-          <span class="pill">React ⚛️</span>
-          <span class="pill">PHP & MySQL 🐘🗃️</span>
-          <span class="pill">WordPress 📝</span>
-          <span class="pill">Linux Hosting 🧪</span>
-          <span class="pill">Angular 🧭</span>
-        </div> 
-
-      </div> <!-- toolbelt -->
-    </section> <!-- skils -->
-  </div>  <!-- about right -->
-</section> <!-- about -->
-
-<section id="codingprojects" class="project-section">
-<h2>✨ Coding Projects ✨</h2>
-<h3 class="section-subtitle">Please click the link under the features 'pills' to view the GitHub repo for each project</h3>
-
-<div class="project-container">
-
-<!-- Project 1 -->
-<div class="project-card">
-  <h3 class="project-title">🌿 Dewdrop Defenders</h3><br>
- <div class="project-blurb">
-  <p>A cozy turn-based Java game featuring defenders, weather effects, and custom enemy logic. Inspired by Stardew vibes!</p>
- </div><br>
-
-<div class="pill-group">
-  <span class="pill">Java</span>
-  <span class="pill">OOP</span>
-  <span class="pill">Game Dev</span>
-  <span class="pill">VS Code</span>
-  <span class="pill">GitHub</span>
-</div>
-
-  <a href="https://github.com/mintbanshee/Java_Assignment_3" target="_blank" class="view-button">🔗 View Code</a>
-<br><br>
-  <div class="screenshot-section">
-    <h3>🧑‍💻 The Coding</h3>
-    <div class="screenshot-row">
-      <img src="assets/images/DewDrop_Defenders_Main.png" alt="Main code" class="screenshot">
-      <img src="assets/images/DewDrop_Defenders_Ink.png" alt="Ink code" class="screenshot">
+    <div id="skillsRow">
+      <span>Git (Version Control)</span>
+      <span>GitHub</span>
+      <span>API Consumption</span>
+      <span>Data Parsing (JSON)</span>
+    </div>
+    <div id="skillsRow">
+      <span>UI/UX</span>
+      <span>Information Architecture (IA)</span>
+      <span>Figma (transitioning from XD)</span>
+    </div>
+    <section id="academic-progress" class="accordion">
+      <button class="accordion-toggle">Academic Progress
+        <span class="arrow">▾</span>
+      </button>
+      <div class="accordion-content">
+        <ul class="grade-list">
+          <li>HTML & CSS — 100%</li>
+          <li>Graphical Design — 100%</li>
+          <li>Swift Development — 100%</li>
+          <li>Java Development — 100%</li>
+          <li>Version Control — 100%</li>
+          <li>UI/UX Design — 100%</li>
+          <li><i>JavaScript - In Progress</i></li>
+        </ul>
+      </div>
+    </section>
+    <div id="featureCard">
+      <h1>Featured Project</h1>
+      <img id="graphicIcon" src="assets/images/icons/GraphicalDesign_Icon.png" alt="Graphic Design Icon">
+      <h2>Driftwood Atlas</h2>
+      <p>A cozy, handcrafted brand brought to life with Illustrator and custom visuals, then built into a clean, responsive layout in VS Code.</p>
+      <p>Concept: A handcrafted, nature-inspired brand exploring driftwood artistry through cozy, organic visuals.</p>
+      <div id="featuredMedia">
+        <img id="projectThumb" src="assets/images/design/driftwoodAtlas/DriftwoodAtlasLogo.png" alt="Driftwood Atlas Homepage Screenshot">
+        <a href="https://mintbanshee.github.io/HTML_Assignment_4/" class="featureLink" target="_blank">View Driftwood Atlas</a>
+      </div>
+        <div id="featureSkillsRow">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Illustrator</span>
+        <span>Photoshop</span>
+      </div>
     </div>
   </div>
-
-  <div class="screenshot-section">
-    <h3>🕹️ The Gameplay</h3>
-    <div class="screenshot-row">
-      <img src="assets/images/Start.png" alt="Game start" class="screenshot">
-      <img src="assets/images/Attacks.png" alt="Attacks" class="screenshot">
-      <img src="assets/images/End.png" alt="Game end" class="screenshot">
-    </div>
-  </div>
-</div>
-</div>
-
-<!-- Project 2 -->
-<div class="project-card">
-<h3 class="project-title">🌱 Sprout</h3><br>
-<div class="project-blurb">
-  <p>A Java CLI tool, created with the assistance of AI as part of my course assignments.  
-  It scaffolds GitHub repos and generates README and Wiki files.</p>
-</div><br>
-
-<div class="pill-group">
-  <span class="pill">Java</span>
-  <span class="pill">OOP</span>
-  <span class="pill">CLI</span>
-  <span class="pill">VS Code</span>
-  <span class="pill">GitHub</span>
-</div>
-
-  <a href="https://github.com/mintbanshee/Sprout_App" target="_blank" class="view-button">🔗 View Code</a>
-<br><br>
-<h3>🌱 Sprout in Action</h3>
-<div class="screenshot-pair">
-  <img src="assets/images/Sprout_Repo.png" alt="Sprout Repo Screenshot" class="screenshot">
-  <img src="assets/images/Sprout_Template_and_Repo.png" alt="Sprout Template Screenshot" class="screenshot">
-  <img src="assets/images/Sprout_Help.png" alt="Sprout Help Screenshot" class="screenshot">
-</div>
-
-</div>
-
-<!-- Project 3 -->
-<div class="project-card">
-<h3 class="project-title">☕ Cozy Brew Timer</h3><br>
-<div class="project-blurb">
-<p>A cozy CLI app to help you steep the perfect cup! This Java project prompts the user for their tea type, then returns the ideal temperature and steep time,<br>with an option to brew another cup. Features soft logic, replay loops, and cozy vibes.
-</p><br>
-
-<div class="pill-group">
-  <span class="pill">Java</span>
-  <span class="pill">Tea Tech</span>
-  <span class="pill">CLI</span>
-  <span class="pill">VS Code</span>
-  <span class="pill">GitHub</span>
-</div>
-
-  <a href="https://github.com/mintbanshee/CozyBrew" target="_blank" class="view-button">🔗 View Code</a>
-<br><br>
-<h3>☕ Where there is tea, there is happiness</h3>
-<div class="screenshot-pair">
-  <img src="assets/images/CozyBrew.png" alt="Cozy Brew Sample Output" class="screenshot">
-  <img src="assets/images/CozyBrew_Coding.png" alt="Cozy Brew Coding Screenshot" class="screenshot">
-</div>
-
-
-</div>
-</div>
-</section>
-
-
-<section id="designprojects" class="project-section">
-  <h2>✨ Design Projects ✨</h2>
-  <h3 class="section-subtitle">Please click the link under the features 'pills' to view the functioning Adobe XD preview for each project</h3>
-<br>
-
-<div class="project-container">
-
-<!-- Project 1 -->
-   <div class="project-card">
-      <h3 class="project-title">🎨 Scribe’s Haven</h3>
-      <div class="project-blurb">
-    <p>A dreamy café-bookstore concept built with layered aesthetics and nostalgic vibes.<br>This desktop & mobile UI/UX mockup features fully working navigation and soft animated transitions. Created in Adobe XD during the UI/UX module.</p>
-    </div><br>
-
-    <div class="pill-group">
-      <span class="pill">UI/UX</span>
-      <span class="pill">Adobe XD</span>
-      <span class="pill">Mockup</span>
-      <span class="pill">Animated Prototype</span>
-      <span class="pill">Working Navigation</span>
-    </div>
-    <a href="https://xd.adobe.com/view/5e9cdc26-c12b-4f90-9a55-ef99c4987fe3-0bcf/" target="_blank" class="view-button">🔍 View Web Design</a><br>
-    <a href="https://xd.adobe.com/view/e1109140-1de0-41c9-b449-676c8bf183ba-b443/" target="_blank" class="view-button">🔍 View Mobile Design</a>
-<br><br>
-<div class="mockup-row">
-  <img src="assets/images/Scribes_Haven_Laptop.png" alt="Laptop view" class="laptop">
-  <img src="assets/images/Scribe_Haven_Mobile.png" alt="Mobile view" class="mobile">
-</div>
-</div>
-
-<!-- Project 2 -->
- <div class="project-card">
-      <h3 class="project-title">🌿 BotaniCute</h3><br>
-      <div class="project-blurb">
-    <p>A heartwarming plant care companion app designed for a cozy little plant shop that truly cares.<br>BotaniCute helps customers nurture their plant babies with love, share decor inspiration, and connect with a like-minded community.<br>Encouraging users to care, connect, and celebrate their plant journeys 🌿💚</p> <br> <p>Created in Adobe XD during the UI/UX module, the prototype features fully working navigation and animated transitions to bring its cozy charm to life.</p>
-  </div><br>
-
-    <div class="pill-group">
-      <span class="pill">UI/UX</span>
-      <span class="pill">Adobe XD</span>
-      <span class="pill">Mobile App</span>
-      <span class="pill">Animated Prototype</span>
-      <span class="pill">Working Navigation</span>
-      <span class="pill">Plant Care</span><br> 
-    </div>
-    <a href="https://xd.adobe.com/view/131429b1-5ee4-498d-8b23-44afe64d3daa-4647/" target="_blank" class="view-button">🔍 View Design</a>
-<br><br>
-<div class="mockup-row">
-  <img src="assets/images/BotaniCute_Mockup_1.png" alt="Home" class="mobile">
-  <img src="assets/images/BotaniCute_Mockup_2.png" alt="Menu" class="mobile">
-  <img src="assets/images/BotaniCute_Mockup_3.png" alt="About" class="mobile">
-</div>
-</div>
-
-<!-- Project 3 -->
-  <div class="project-card">
-      <h3 class="project-title">🎀 Sailor Moon</h3><br>
-    <div class="project-blurb">
-    <p>A fan-made Sailor Moon concept site designed to celebrate magical girl nostalgia with crisp layout and themed visuals.<br>Built in Adobe XD, this prototype includes animated page transitions and fully functional navigation.</p>
-    </div><br>
-
-    <div class="pill-group">
-      <span class="pill">UI/UX</span>
-      <span class="pill">Adobe XD</span>
-      <span class="pill">Concept Site</span>
-      <span class="pill">Animated Prototype</span>
-      <span class="pill">Working Navigation</span>
-    </div>
-    <a href="https://xd.adobe.com/view/9eb0b28b-f60b-4feb-8c27-5c7fc8f85216-cbe3/" target="_blank" class="view-button">🔍 View Design</a>
-<br><br>
-<div class="mockup-row">
-  <img src="assets/images/SailorMoon_Mockup_1.png" alt="Laptop view" class="laptop">
-</div>
-</div>
-
-<!-- Project 4 -->
-  <div class="project-card">
-      <h3 class="project-title">🌌 Star Wars</h3><br>
-    <div class="project-blurb">
-    <p>A themed layout concept designed during the Photoshop module, inspired by the Star Wars universe and the visual tone of Rogue One.<br>This project focused on layering, visual balance, and creating a cinematic feel using provided assets.</p>
-    <br>
-    <p>The design features strong grid structure, atmospheric imagery, and character-driven emphasis to reflect the rebellion’s story arc.</p>
-    </div><br>    
-
-    <div class="pill-group">
-      <span class="pill">Photoshop</span>
-      <span class="pill">Custom Layout</span>
-      <span class="pill">Fandom-Based Concept</span>
-      <span class="pill">Shape Tools</span>
-      <span class="pill">Guides</span>
-    </div>
-<br><br>
-<div class="mockup-row">
-  <img src="assets/images/StarWars_Mockup_1.png" alt="Laptop view" class="laptop">
-</div>
-<div class="artboard-row">
-  <img src="assets/images/Photoshop_Assignment_1.png" alt="Full View" class="webartboard">
-</div>
-</div>
-
-<!-- Project 5 -->
-  <div class="project-card">
-      <h3 class="project-title">👩‍💻 Cozy Pixel</h3><br>
-    <div class="project-blurb">
-    <p>Cozy Pixel was born from a love of design, code, and the cozy rituals that fuel creativity — like coffee once sipped from a beloved pixel heart tumbler, now retired but never forgotten.</p>
-    <br>
-    <p>This Photoshop assignment challenged me to design a full scrollable homepage using only the provided assets.<br>I blended clean layout structure with cozy aesthetics and pixel-style illustrations to reflect a fictional design studio with heart.</p>
-  </div><br>
-
-    <div class="pill-group">
-      <span class="pill">Photoshop</span>
-      <span class="pill">Custom Assets</span>
-      <span class="pill">Layer Groups</span>
-      <span class="pill">Shape Tools</span>
-      <span class="pill">Cozy Branding</span>
-      <span class="pill">Fully Structured Web Page</span>
-    </div>
-<br><br>
-<div class="mockup-row">
-  <img src="assets/images/CozyPixel_Mockup_1.png" alt="Laptop view" class="laptop">
-</div>
-<div class="artboard-row">
-  <img src="assets/images/Fixed_Photoshop_Assignment_2.png" alt="Full View" class="webartboard">
-  </div>
-  </div>
-
-  <!-- Project 6 -->
-<div class="project-card">
-  <h3 class="project-title">🥷 Chilldeck – Client-Style Themed Mockup</h3>
-  <div class="project-blurb">
-    <p>This one-page HTML/CSS site was created during Week 1 of my HTML & CSS class using assets provided by my instructor.</p>
-    <p>As part of the assignment, we were encouraged to customize our site and make it our own — so I imagined Chilldeck not just as a musician, but as a mysterious, ninja-like developer persona.</p>
-    <p>The layout, images, and theme were built entirely from the provided materials, while the character and content were created to match the stealthy, high-skill vibe I envisioned.</p>
-  </div><br>
-
-  <div class="pill-group">
-    <span class="pill">HTML</span>
-    <span class="pill">CSS</span>
-    <span class="pill">Mockup</span>
-    <span class="pill">Persona Writing</span>
-    <span class="pill">Class Project</span>
-  </div>
-  
-  <a href="https://mintbanshee.github.io/html-css-chilldeck-mockup/" target="_blank" class="view-button">🌐 Live Site</a>
-  <a href="https://github.com/mintbanshee/html-css-chilldeck-mockup" target="_blank" class="view-button">💻 View Code</a>
-  <br><br>
-
-  <div class="mockup-row">
-    <img src="assets/images/Chilldeck_Mockup.png" alt="Screenshot of Chilldeck site" class="laptop">
-  </div>
-</div>
-
-</section>
-
-<!-- Logo Projects (clean version) -->
-<section id="logoprojects" class="project-section logo-subsection">
-  <h2>✨ Logo Projects ✨</h2>
-
-  <!-- Project 1 -->
-  <div class="logo-card">
-    <h3 class="project-title">🌲 Driftwood Atlas</h3>
-    <div class="project-blurb">
-      <p>
-        This circular logo was designed to evoke rustic charm and adventure,
-        blending a natural woodcut shape with a compass rose to symbolize
-        direction and storytelling.<br>Created during Illustrator practice,
-        Driftwood Atlas was my first attempt at manually shaping elements with
-        the pen tool—an exercise in patience, learning, and visual storytelling
-        without texture or shading.
-      </p>
-    </div>
-
-    <div class="pill-group">
-      <span class="pill">Illustrator</span>
-      <span class="pill">Custom Compass Rose</span>
-      <span class="pill">Circular Logo Composition</span>
-      <span class="pill">Hand-drawn Pen Tool</span>
-      <span class="pill">Patience - "P..A..P..A..P"</span>
-    </div>
-
-    <div class="mockup-row">
-      <img
-        src="assets/images/Final_Driftwood_Atlas_Transparent.png"
-        alt="Driftwood Atlas Logo"
-        class="laptop"
-      >
-    </div>
-  </div>
-
-  <!-- Project 2 -->
-  <div class="logo-card">
-    <h3 class="project-title">🪐 StellarNest</h3>
-    <div class="project-blurb">
-      <p>
-        This branding concept was created for <em>StellarNest</em>, a futuristic
-        space-tech incubator that began as a think tank for off-Earth
-        innovation. The client requested a minimalist logo featuring a nest of
-        orbit lines surrounding a central star or planet, with a palette of deep
-        blue, silver, and orange. I designed this abstract solar system to
-        represent innovation, launch momentum, and collaborative gravity.
-      </p>
-      <p>
-        Using Illustrator’s <strong>width tool</strong>, I shaped the orbital
-        paths to create a subtle sense of depth and intentional flow—hinting at
-        layered ideas and shared direction. The result is a clean, balanced
-        composition that aligns with the brief while staying true to my style:
-        symbolic, story-driven, and orbiting around meaning.
-      </p>
-    </div>
-
-    <div class="pill-group">
-      <span class="pill">Illustrator</span>
-      <span class="pill">Visual Metaphor</span>
-      <span class="pill">Orbit Path Typography</span>
-      <span class="pill">Width Tool Perspective</span>
-    </div>
-
-    <div class="mockup-row">
-      <img
-        src="assets/images/StellarNest2.png"
-        alt="StellarNest Birdnest"
-        class="laptop"
-      >
-      <img
-        src="assets/images/StellarNest3.png"
-        alt="StellarNest Realistic Orbit"
-        class="laptop"
-      >
-    </div>
-  </div>
-</div>
-
-<!-- 🌿 Contact Section -->
-<section id="contact" class="contact-section">
-  <h2>💌 Let’s Connect 💌</h2>
-  <p class="contact-intro">
-    I’d love to hear from you! Whether it’s a project idea, a cozy collaboration, or a friendly hello — feel free to reach out anytime.
-  </p>
-
-  <div class="contact-links">
-    <a href="mailto:mintbanshee@gmail.com" class="contact-button">📧 Email Me</a>
-    <a href="https://github.com/mintbanshee" class="contact-button" target="_blank">🐙 GitHub</a>
-    <a href="www.linkedin.com/in/mintbanshee" class="contact-button" target="_blank">💼 LinkedIn</a>
-  </div>
-</section>
-
-
-
 
 
 
 
   <footer>
-    <span style="font-size: 1.2em;">✨</span>
-    <p>&copy; 2025 MintBanshee, all cozy vibes reserved</p>
-     <div class="essentialsBox">
-        <h3>My Cozy Coding Essentials</h3>
-        <div class="essentialsContainer">
-          <div class="essentialItem">
-            <img src="assets/images/PixelHeartCoffee.png" alt="pixel heart tumbler" class="tumbler">
-            <p>Pixel &#10084; Coffee</p>
-          </div>
-          <div class="essentialItem">
-            <img src="assets/images/Earbuds.png" alt="earbuds" class="earbuds">
-            <p>Boppable Beats</p>
-          </div>
-          <div class="essentialItem">
-            <img src="assets/images/CandyBowl.png" alt="bowl of candy" class="candy">
-            <p>Assignment Fuel</p>
-          </div>
-        </div>
-      </div>
+<div id="footerSocials">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <a href="mailto:mintbanshee@gmail.com">
+        <img id="social" src="assets/images/shell/email-black.png" alt="Email"></a>
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+</div>
+<div id="footerText">
+  &copy; 2025 Alexandria McQueen — MintBanshee
+  <br>Crafted with care in VS Code
+</div>
 
   </footer>
+  <script>
+  document.querySelector(".accordion-toggle").addEventListener("click", function() {
+    this.parentElement.classList.toggle("open");
+  });
+</script>
+
 </body>
 </html>
