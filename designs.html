@@ -31,6 +31,7 @@
   <a href="index.html" class="parisienne-regular">home</a>
   <a href="about.html" class="parisienne-regular">about</a>
   <a href="projects.html" class="parisienne-regular">projects</a>
+  <a href="mixtape.html" class="parisienne-regular">mixtape</a>
   <a href="contact.html" class="parisienne-regular">contact</a>
 </nav>
 <header>
@@ -47,7 +48,101 @@
     </div>
   </header>
 
+<div id="lightbox" onclick="hideBox();">
+    <div id="modalContent" onclick="event.stopPropagation()">
+      <div id="modalLeft">
+        <img id="lightboxImage" src="https://placeholdit.com/500x500" alt="Project Details Popup">
+      </div>
+      <div id="modalRight">
+        <h2 id="projectName"></h2>
+        <p id="projectDescription"></p>
+        <p id="projectPrice" class="price"></p>
+        <button id="View Project" onclick="addItem(currentIndex)">View Project</button>
+      </div>
+      <span id="closeBtn" onclick="hideBox()">&times;</span>
+    </div>
+   </div> 
 
+
+  <div id="designMain">
+    <h1>My Design Projects</h1>
+    <p>Designed with intention, patience and care for the user. Placeholder Text</p>
+
+    <div id="featureCard">
+      <h1>BotaniCute</h1>
+      <img id="graphicIcon" src="assets/images/icons/GraphicalDesign_Icon.png" alt="Graphic Design Icon">
+      <h3>UI/UX Thesis</h3>
+      <p>A comprehensive UI/UX design study showcasing a full-scale mobile application concept.</p>
+      <p>The project emphasizes User-Centered Design (UCD) and advanced Information Architecture (IA), utilizing Adobe XD to prototype complex navigation flows and demonstrate high-fidelity mockups for a clean, intuitive user experience.</p>
+      <div id="featuredMedia">
+        <img id="BotaniCuteThumb" src="assets/images/design/botaniCute/BotaniCute_Mockup_1.png" alt="Driftwood Atlas Homepage Screenshot">
+        <a href="https://xd.adobe.com/view/e9aa247d-1260-4e3c-9454-3515dc3c7790-bcf9/" class="featureLink" target="_blank">View BotaniCute</a>
+      </div>
+        <div id="featureSkillsRow">
+        <span>User-Centered Design</span>
+        <span>Information Architecture</span>
+        <span>High-Fidelity Mockups</span>
+        <span>Prototyping</span>
+        <span>Adobe XD</span>
+      </div>
+    </div>
+    <div id="featureCard">
+      <h1>Scribe's Haven</h1>
+      <img id="graphicIcon" src="assets/images/icons/GraphicalDesign_Icon.png" alt="Graphic Design Icon">
+      <h3>Web/Mobile Mockup</h3>
+      <p>A detailed Web and Mobile Mockup focusing on complex Information Architecture (IA) for a specialty retail concept.</p>
+      <p>The project demonstrates proficiency in building logical navigation paths, modular components, and a consistent visual hierarchy necessary for a superior User Experience (UX).</p>
+      <div id="featuredMedia">
+        <img id="ScribesHavenThumb" src="assets/images/design/scribesHaven/Scribes_Haven_Laptop.png" alt="Driftwood Atlas Homepage Screenshot">
+        <a href="https://xd.adobe.com/view/372fcccc-1d71-4266-bb92-b436cebca417-627c/" class="featureLink" target="_blank">View Scribe's Haven Web</a>
+        <a href="https://xd.adobe.com/view/490f698b-2ed7-4e79-9817-2d5b33c029e5-1c5c/" class="featureLink" target="_blank">View Scribe's Haven Mobile</a>
+      </div>
+        <div id="featureSkillsRow">
+        <span>Web Mockups</span>
+        <span>Modular Components</span>
+        <span>Information Architecture</span>
+        <span>Prototyping</span>
+        <span>Adobe XD</span>
+      </div>
+    </div>
+
+
+    <div id="gallery">
+
+      <div id="designsRow">
+        <div class="designProject">
+          <img src="assets/images/design/img1.png" alt="Chester Necklace" onclick="showBox(1);">
+          <p>Blue Spruce Musings</p> </div>
+        <div class="designProject">
+          <img src="assets/images/design/img10.png" alt="Slip-On Tassel Necklace" onclick="showBox(10)">
+          <p>LunarLens</p> </div>
+        <div class="designProject">
+          <img src="assets/images/design/img6.png" alt="Slip-On Tassel Necklace" onclick="showBox(6)">
+          <p>Star Wars</p> </div>
+        <div class="designProject designProjectTall">
+          <img src="assets/images/design/img9.png" alt="Chester Necklace" onclick="showBox(9);">
+          <p>CozyPixel</p> </div>
+        <div class="designProject">
+          <img src="assets/images/design/img4.png" alt="Smoky Quartz Necklace" onclick="showBox(4)">
+          <p>Driftwood Atlas</p></div>
+        <div class="designProject">
+        <img src="assets/images/design/img7.png" alt="Lariat Necklace" onclick="showBox(7)">
+          <p>Syle Salon</p> </div>
+        <div class="designProject">
+          <img src="assets/images/design/img8.png" alt="Smoky Quartz Necklace" onclick="showBox(8)">
+          <p>Sailor Moon Fansite</p></div>
+        <div class="designProject">
+          <img src="assets/images/design/img11.png" alt="Lariat Necklace" onclick="showBox(11)">
+          <p>StellarNest</p> </div>
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
 
 
 
@@ -69,6 +164,7 @@
       <br>Crafted with care in VS Code
     </div>
   </footer>
-
+<script src="js/app.js"></script>
+<script src="js/jquery.js"></script>
 </body>
 </html>
