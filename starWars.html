@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
+  <title>MintBanshee's Portfolio</title>
+</head>
+<body>
+    <div id="socials">
+    <a href="index.html">
+    <img id="navLogo" src="assets/images/shell/logoBlack.png" alt="logo - home link">
+    </a>
+    <a href="mailto:mintbanshee@gmail.com">
+    <img id="navEmail" src="assets/images/shell/email-black.png" alt="Email">
+    </a>
+  </div>
+  <div id="burgerMenu" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+<nav>
+  <a href="index.html" class="parisienne-regular">home</a>
+  <a href="about.html" class="parisienne-regular">about</a>
+  <a href="projects.html" class="parisienne-regular">projects</a>
+  <a href="mixtape.html" class="parisienne-regular">mixtape</a>
+  <a href="contact.html" class="parisienne-regular">contact</a>
+</nav>
+<header>
+    <div id="logo">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <img id="logoIMG" src="assets/images/shell/logoMint.png" alt="logo">
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+  </header>
+
+<div id="lightbox" onclick="hideBox();">
+    <div id="modalContent" onclick="event.stopPropagation()">
+      <div id="modalLeft">
+        <img id="lightboxImage" src="https://placehold.co/500" alt="Project Details Popup">
+      </div>
+      <div id="modalRight">
+        <h2 id="projectName"></h2>
+        <p id="projectDescription"></p>
+        <button id="viewProjectBtn" onclick="viewProject()">View Project</button>
+      </div>
+      <span id="closeBtn" onclick="hideBox()">&times;</span>
+    </div>
+   </div> 
+
+    <div id="projectHero">
+      <h1>Star Wars Mockup</h1>
+      <h3>Promotional Web Mockup · Photoshop Layout · Cinematic Styling</h3>
+      <p>A cinematic homepage mockup created for a Photoshop layout assignment.
+        The design combines character photography, film branding, and structured navigation to simulate a promotional landing page for a Star Wars release.
+        The composition practices visual hierarchy, balance, and cohesive styling across header, gallery sections, and footer elements — resulting in a polished, magazine-style layout.</p>
+      <img id="starWarsFull" src="assets/images/design/starWarsFull.png" alt="Star Wars Assignment Mockup">
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div id="footerSocials">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <a href="mailto:mintbanshee@gmail.com">
+        <img id="social" src="assets/images/shell/email-black.png" alt="Email"></a>
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+    <div id="footerText">
+      &copy; 2025 Alexandria McQueen — MintBanshee
+      <br>Crafted with care in VS Code
+    </div>
+  </footer>
+
+</body>
+</html>

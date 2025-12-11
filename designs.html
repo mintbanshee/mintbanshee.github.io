@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css">
-  <script src="js/app.js"></script>
   <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
   <title>MintBanshee's Portfolio</title>
 </head>
 <body>
@@ -51,13 +51,12 @@
 <div id="lightbox" onclick="hideBox();">
     <div id="modalContent" onclick="event.stopPropagation()">
       <div id="modalLeft">
-        <img id="lightboxImage" src="https://placeholdit.com/500x500" alt="Project Details Popup">
+        <img id="lightboxImage" src="https://placehold.co/500" alt="Project Details Popup">
       </div>
       <div id="modalRight">
         <h2 id="projectName"></h2>
         <p id="projectDescription"></p>
-        <p id="projectPrice" class="price"></p>
-        <button id="View Project" onclick="addItem(currentIndex)">View Project</button>
+        <button id="viewProjectBtn" onclick="viewProject()">View Project</button>
       </div>
       <span id="closeBtn" onclick="hideBox()">&times;</span>
     </div>
@@ -111,39 +110,38 @@
 
       <div id="designsRow">
         <div class="designProject">
-          <img src="assets/images/design/img1.png" alt="Chester Necklace" onclick="showBox(1);">
+          <img src="assets/images/design/img1.png" alt="Blue Spruce Musings Shop Page" onclick="showBox(1);">
           <p>Blue Spruce Musings</p> </div>
         <div class="designProject">
-          <img src="assets/images/design/img10.png" alt="Slip-On Tassel Necklace" onclick="showBox(10)">
+          <img src="assets/images/design/img2.png" alt="LunarLens Gallery" onclick="showBox(2)">
           <p>LunarLens</p> </div>
         <div class="designProject">
-          <img src="assets/images/design/img6.png" alt="Slip-On Tassel Necklace" onclick="showBox(6)">
+          <img src="assets/images/design/img3.png" alt="Star Wars Mockup" onclick="showBox(3)">
           <p>Star Wars</p> </div>
         <div class="designProject designProjectTall">
-          <img src="assets/images/design/img9.png" alt="Chester Necklace" onclick="showBox(9);">
+          <img src="assets/images/design/img4.png" alt="CozyPixel Mockup" onclick="showBox(4);">
           <p>CozyPixel</p> </div>
         <div class="designProject">
-          <img src="assets/images/design/img4.png" alt="Smoky Quartz Necklace" onclick="showBox(4)">
+          <img src="assets/images/design/img5.png" alt="Driftwood Atlas Home Page" onclick="showBox(5)">
           <p>Driftwood Atlas</p></div>
         <div class="designProject">
-        <img src="assets/images/design/img7.png" alt="Lariat Necklace" onclick="showBox(7)">
+        <img src="assets/images/design/img6.png" alt="Style Salon Logo Design" onclick="showBox(6)">
           <p>Syle Salon</p> </div>
         <div class="designProject">
-          <img src="assets/images/design/img8.png" alt="Smoky Quartz Necklace" onclick="showBox(8)">
+          <img src="assets/images/design/img7.png" alt="Sailor Moon Fansite Home Page" onclick="showBox(7)">
           <p>Sailor Moon Fansite</p></div>
         <div class="designProject">
-          <img src="assets/images/design/img11.png" alt="Lariat Necklace" onclick="showBox(11)">
+          <img src="assets/images/design/img8.png" alt="StellarNest Logo Design" onclick="showBox(8)">
           <p>StellarNest</p> </div>
+        <div class="designProject">
+          <img src="assets/images/design/img9.png" alt="MintBanshee Logo Design" onclick="showBox(9)">
+        <p>MintBanshee</p> </div>
       </div>
-
-
 
     </div>
 
 
-
   </div>
-
 
 
   <footer>
@@ -164,7 +162,6 @@
       <br>Crafted with care in VS Code
     </div>
   </footer>
-<script src="js/app.js"></script>
-<script src="js/jquery.js"></script>
+
 </body>
 </html>

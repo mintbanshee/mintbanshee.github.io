@@ -18,73 +18,90 @@ function toggleMenu() {
 let currentIndex = null;
 
 const projects = [
-  {name: "Chester Necklace", price: 250,
-    description: `A multi-strand piece inspired by personal growth. 
-The layers represent life’s heaviest moments, the fragility of love, the heart’s defenses, and the strength that holds us together. 
+  {name: "Blue Spruce Musings",
+    description: `Homepage and brand refresh created for my former handcrafted jewelry business now honoured as a client project for my past self.
 
-A wearable reminder of resilience.
+    After closing the business to pursue my education in web and app development, I re-imagined the brand through a modern design lens.
 
-Named in tribute to Chester Bennington, whose voice and music helped guide many through darkness and toward healing.`,
-img: "assets/images/products/img1.png"},
+    The layout highlights artisan storytelling, calm natural aesthetics, and intuitive user flow, reflecting the style and sensibilities I’ve developed in my new career path.`,
+    img: "assets/images/design/img1.png",
+    link: "https://mintbanshee.github.io/BlueSpruceMusings/"},
 
-  {name: "Slip-On Tassel Necklace", price: 125,
-    description: 'A 35" long necklace with no clasp. Designed to be a subtle pop of personality, this necklace just slips on over your head!',
-    img: "assets/images/products/img2.png"},
-
-  {name: "Lariat Necklace", price: 150,
-    description: "The necklace for those who struggle with decisions! This necklace features a little magnetic end so you can swap out the pendant to suit your mood or style! Designed with no clasp, just drape it around and slip the magnet end through the large ring.",
-    img: "assets/images/products/img3.png"},
-
-  {name: "Smoky Quartz Necklace", price: 85,
-    description: "This beautiful asymmetrical necklace features one half of the chain in the Byzantine weave and the other in JPL. At the center is a lovely Smoky Quartz pendant.",
-    img: "assets/images/products/img4.png"},
-
-  {name: "Micro-Persephone Bracelet", price: 45,
-    description: "A small but personality-filled bracelet made in the Persephone weave. This bracelet features a dangle-chain for adjustability finished with an elegant dragonfly charm.",
-    img: "assets/images/products/img5.png"},
+  {name: "LunarLens",
+    description: `A product grid and gallery mockup for an accessory boutique. 
     
-   {name: "Not-an-Azidahaka", price: 40,
-    description: "Named after a funny situation in the chainmaille community, this bracelet is anything but funny! Pastel rings lay perfectly flat on your wrist while a subtle ring of black accents them. Perfectly drool-worthy, this bracelet is a fan favourite!",
-    img: "assets/images/products/img6.png"},
-    
-  {name: "Micro-Byzee Bubbles Charm Bracelet", price: 50,
-    description: "Inspired by the elegant side of steampunk, this bracelet features aged keys dangling from an intricately woven delicate bracelet.",
-    img: "assets/images/products/img7.png"},
-    
-  {name: "GSG Bracelet", price: 35,
-    description: "Celebrate the beauty of winter with this frosty bracelet.",
-    img: "assets/images/products/img8.png"},
-    
-  {name: "Trinity Twist Earrings", price: 40,
-    description: "These beautiful earrings may look delicate but they make a statement! Tiny rings spiral in long elegance, dancing as you move.",
-    img: "assets/images/products/img9.png"},
-    
-  {name: "Enchanted Forest Moorish Rose Coaster", price: 85,
-    description: "This coaster is forest beauty at its finest! Featuring a floral shape amidst the forest colour palette and electroplated hematite crescent moons at the corners.",
-    img: "assets/images/products/img10.png"},
-    
-  {name: "Coffin Shaped Moorish Rose Coaster", price: 85,
-    description: "Whether it be your home's decor or for a love of Halloween, this coaster's coffin shape is sure to fit right in!",
-    img: "assets/images/products/img11.png"},    
+    UI layout demonstrating flexible product organization, soft visual branding, and a clean shopping experience. Focuses on hierarchy, consistency, and easy browsing for an online retail environment.`,
+    img: "assets/images/design/img2.png",
+    link: "https://mintbanshee.github.io/HTML_Assignment_3/"},
 
-  {name: "Green Anklet", price: 45,
-    description: "A delicate anklet for the nature lover featuring a Byzantine focal and a beautiful dragonfly charm.",
-    img: "assets/images/products/img12.png"}, 
+  {name: "Star Wars",
+    description: `A themed homepage concept blending entertainment branding with clean UX.
+    
+    Fan-style landing page designed to highlight featured content, media elements, and clear calls-to-action. Combines cinematic visuals with structured layout patterns common in entertainment platforms.`,
+    img: "assets/images/design/img3.png",
+    link: "starWars.html"},
+
+  {name: "CozyPixel",
+    description: `A web design mockup built around a cozy, creative studio brand.
+    
+    Asymmetrical layout showcasing service offerings, portfolio sections, and a custom visual identity. Emphasizes approachable branding, modular UI components, and a user-friendly scroll experience.`,
+    img: "assets/images/design/img4.png",
+    link: "cozyPixel.html"},
+
+  {name: "Driftwood Atlas",
+    description: `A branding concept exploring natural textures and handcrafted aesthetics.
+    
+    Includes mood boards, logo refinement, and a cohesive visual identity built around a custom compass-rose emblem.`,
+    img: "assets/images/design/img5.png",
+    link: "https://mintbanshee.github.io/HTML_Assignment_4/"},
+    
+   {name: "Style Salon",
+    description: `A minimal logo and brand concept for a boutique hair studio.
+    
+    Logo-focused design demonstrating vector precision, brand personality, and clean pairing of typography and iconography. Created to represent a sleek, modern service business.`,
+    img: "assets/images/design/img6.png",
+    link: "styleSalon.html"},
+    
+  {name: "Sailor Moon Fansite",
+    description: `A playful fan homepage using colorful imagery and character highlight sections.
+    
+    A thematic mockup showcasing character galleries, news features, and nostalgic UI styling. Uses bright visuals and structured sections to create an engaging, fan-centered browsing experience.`,
+    img: "assets/images/design/img7.png",
+    link: "https://xd.adobe.com/view/36638359-46c4-43cd-a90b-3e4cf4d40410-6330/"},
+    
+  {name: "StellarNest",
+    description: `A clean, simple logo mark built around astronomy-inspired branding.
+    
+    Vector logo design emphasizing clarity, minimalism, and symbolic imagery. Demonstrates ability to translate thematic concepts — space, orbit, motion — into a polished brand asset.`,
+    img: "assets/images/design/img8.png",
+    link: "stellarNest.html"},
+  
+    {name: "MintBanshee",
+    description: `A custom brand logo blending a crescent moon with mint-green accents. 
+    
+    Designed to reflect a whimsical, calm creative identity while staying versatile for web, print, and UI use.`,
+    img: "assets/images/design/img9.png",
+    link: "mintBanshee.html"},
 ]
-
 
 function showBox(num) {
   const item = projects[num - 1];
   currentIndex = num - 1;
 
-  $('#lightbox').css('visibility', 'visible');
+  $('#lightbox').addClass('active');
   $('#lightboxImage').attr('src', item.img);
   $('#projectName').text(item.name);
   $('#projectDescription').html(item.description.replace(/\n/g, "<br>"));
-  $('#projectPrice').text(`$${item.price}`);
-  $('#addToCartBtn').attr('data-index', num - 1);
 }
 
 function hideBox() {
-  $('#lightbox').css('visibility', 'hidden');
+  $('#lightbox').removeClass('active');
 }
+
+function viewProject() {
+  const item = projects[currentIndex];
+  if (item.link) {
+    window.open(item.link, "_blank");
+  }
+}
+

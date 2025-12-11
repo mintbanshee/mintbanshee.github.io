@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
+  <title>MintBanshee's Portfolio</title>
+</head>
+<body>
+    <div id="socials">
+    <a href="index.html">
+    <img id="navLogo" src="assets/images/shell/logoBlack.png" alt="logo - home link">
+    </a>
+    <a href="mailto:mintbanshee@gmail.com">
+    <img id="navEmail" src="assets/images/shell/email-black.png" alt="Email">
+    </a>
+  </div>
+  <div id="burgerMenu" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+<nav>
+  <a href="index.html" class="parisienne-regular">home</a>
+  <a href="about.html" class="parisienne-regular">about</a>
+  <a href="projects.html" class="parisienne-regular">projects</a>
+  <a href="mixtape.html" class="parisienne-regular">mixtape</a>
+  <a href="contact.html" class="parisienne-regular">contact</a>
+</nav>
+<header>
+    <div id="logo">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <img id="logoIMG" src="assets/images/shell/logoMint.png" alt="logo">
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+  </header>
+
+<div id="lightbox" onclick="hideBox();">
+    <div id="modalContent" onclick="event.stopPropagation()">
+      <div id="modalLeft">
+        <img id="lightboxImage" src="https://placehold.co/500" alt="Project Details Popup">
+      </div>
+      <div id="modalRight">
+        <h2 id="projectName"></h2>
+        <p id="projectDescription"></p>
+        <button id="viewProjectBtn" onclick="viewProject()">View Project</button>
+      </div>
+      <span id="closeBtn" onclick="hideBox()">&times;</span>
+    </div>
+   </div> 
+
+    <div id="projectHero">
+      <h1>MintBanshee</h1>
+      <h3>Personal Brand Identity • Illustrator • Concept + Logo Design</h3>
+      <p>A custom brand mark created to represent my MintBanshee identity. The logo blends a crescent moon with botanical elements and { } brackets, merging themes of creativity, growth, and code. Designed as a clean vector in Illustrator, the symbol explores shape balance, hand-drawn curves, and subtle ornamentation to form a soft, modern monogram.</p>
+      <p>Below is a work in progress image and two (of the many) early black-and-white variations used during the design process while refining structure, flow, and overall silhouette.</p>
+      <div class="dividerFlair">~ ✧ ~</div>
+      <p>The completed MintBanshee branding package includes:</p>
+      <p>• Primary logo (full colour) – crescent, sprout, { } curly braces, and sparkles<br>
+• Monochrome logo – optimized for print, engraving, stickers, and minimal contexts<br>
+• SVG master file – resolution-independent for web, app icons, and animation<br>
+• Favicon icon (16px/32px/48px) – the tiny moon-sprout mark used in browser tabs<br>
+• Profile-scale version – simplified for social media, GitHub, and avatars<br>
+• Background-safe version – with circular field for use on gradients or photography</p>
+
+<p>Each piece was designed to remain clean, readable, and recognizable at any size,<br>from full-width hero images all the way down to the miniature 16-pixel favicon.</p>
+      <img id="mintLogo" src="assets/images/design/mintbanshee/profilePic.png" alt="CozyPixel Assignment Mockup">
+      <img id="logoProcess" src="assets/images/design/mintbanshee/Process.png" alt="CozyPixel Laptop View">
+      <div class="logoRow">
+        <img id="otherLogo" src="assets/images/design/mintbanshee/MB_Logo1.png" alt="CozyPixel Laptop View">
+        <img id="otherLogo" src="assets/images/design/mintbanshee/MB_Logo9.png" alt="CozyPixel Laptop View">
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div id="footerSocials">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <a href="mailto:mintbanshee@gmail.com">
+        <img id="social" src="assets/images/shell/email-black.png" alt="Email"></a>
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+    <div id="footerText">
+      &copy; 2025 Alexandria McQueen — MintBanshee
+      <br>Crafted with care in VS Code
+    </div>
+  </footer>
+
+</body>
+</html>

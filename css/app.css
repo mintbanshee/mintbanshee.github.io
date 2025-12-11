@@ -531,6 +531,7 @@ footer {
 
 
 /* ======= DESIGN PAGE ======= */
+
 #gallery {
   width: 100%;
   max-width: 1300px; 
@@ -614,6 +615,9 @@ footer {
     height: auto !important; 
     object-fit: cover;
   }
+
+
+
 /* ======= LIGHTBOX ======= */
 
 #lightbox {
@@ -623,16 +627,15 @@ footer {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.6);
-  display: none; /* Hidden by default */
+  display: none; 
   justify-content: center;
   align-items: center;
   z-index: 999;
+  text-align: center;
 }
-
 #lightbox.active {
   display: flex;
 }
-
 #modalContent {
   background: var(--moonmilk);
   padding: 1.5rem;
@@ -644,19 +647,16 @@ footer {
   position: relative;
   box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
-
 #modalLeft img {
   width: 100%;
   max-width: 400px;
   border-radius: 12px;
 }
-
 #modalRight {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-
 #closeBtn {
   position: absolute;
   top: 10px;
@@ -665,7 +665,23 @@ footer {
   cursor: pointer;
   color: var(--nightroot);
 }
-
+#viewProjectBtn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--mintbanshee-green);
+  border-radius: 8px;
+  background: var(--moonbeam);
+  color: var(--shadowmint);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-top: 1rem;
+}
+#viewProjectBtn:hover {
+  background: var(--moonbeam);
+  box-shadow: 0 0 6px var(--mintbanshee-green);
+}
 
 
 
@@ -698,6 +714,151 @@ footer {
   width: 140px;     
   cursor: pointer;  
 }
+
+
+
+
+/* ======= starWars ======= */
+
+#projectHero {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#starWarsFull {
+  width: 80%;
+  margin-top: 25px;
+}
+
+
+
+/* ======= cozyPixel ======= */
+
+#projectHero {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#laptopMockup {
+  width: 60%;
+}
+#starWarsFull {
+  width: 80%;
+  margin-top: 25px;
+}
+
+
+
+
+/* ======= StyleStudio ======= */
+
+#projectHero {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#styleStudioLogo {
+  margin-top: 25px;
+  width: 70%;
+}
+#styleStudioWIP {
+  width: 30%;
+  margin-top: 25px;
+}
+
+
+
+/* ======= StellarNest ======= */
+
+#projectHero {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#stellarCompare {
+  margin-top: 25px;
+  width: 70%;
+}
+#stellarLogo {
+  width: 80%;
+  margin-top: 25px;
+}
+
+
+
+/* ======= MintBanshee ======= */
+
+#projectHero {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#mintLogo {
+  margin-top: 25px;
+  width: 50%;
+}
+#logoProcess {
+  width: 60%;
+  margin-top: 25px;
+}
+
+.logoRow {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; 
+  align-items: center;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+.logoRow img {
+  width: 45%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px; 
+}
+
+
+
+
+
+
+
+
 
 /* ======= @MEDIA ======= */
 

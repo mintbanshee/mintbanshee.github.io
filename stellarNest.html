@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Parisienne&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/app.js"></script>
+  <title>MintBanshee's Portfolio</title>
+</head>
+<body>
+    <div id="socials">
+    <a href="index.html">
+    <img id="navLogo" src="assets/images/shell/logoBlack.png" alt="logo - home link">
+    </a>
+    <a href="mailto:mintbanshee@gmail.com">
+    <img id="navEmail" src="assets/images/shell/email-black.png" alt="Email">
+    </a>
+  </div>
+  <div id="burgerMenu" onclick="toggleMenu();">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+<nav>
+  <a href="index.html" class="parisienne-regular">home</a>
+  <a href="about.html" class="parisienne-regular">about</a>
+  <a href="projects.html" class="parisienne-regular">projects</a>
+  <a href="mixtape.html" class="parisienne-regular">mixtape</a>
+  <a href="contact.html" class="parisienne-regular">contact</a>
+</nav>
+<header>
+    <div id="logo">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <img id="logoIMG" src="assets/images/shell/logoMint.png" alt="logo">
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+  </header>
+
+<div id="lightbox" onclick="hideBox();">
+    <div id="modalContent" onclick="event.stopPropagation()">
+      <div id="modalLeft">
+        <img id="lightboxImage" src="https://placehold.co/500" alt="Project Details Popup">
+      </div>
+      <div id="modalRight">
+        <h2 id="projectName"></h2>
+        <p id="projectDescription"></p>
+        <button id="viewProjectBtn" onclick="viewProject()">View Project</button>
+      </div>
+      <span id="closeBtn" onclick="hideBox()">&times;</span>
+    </div>
+   </div> 
+
+    <div id="projectHero">
+      <h1>StellarNest</h1>
+      <h3>Branding Exploration • Illustrator • Concept Development</h3>
+      <p>A logo design assignment built around an imagined space-tech incubator. The goal was to create a minimalist mark using orbit paths to form a subtle “nest” around a central star, symbolizing innovation, collaboration, and launch-ready ideas.</p>
+      <p>The project went through multiple iterations—beginning with a more abstract, bird-nest-inspired approach, then refined through instructor feedback to reduce visual clutter, unify orbit planes, and improve slogan placement. The final version balances clarity with motion, using deep blues and orange to reflect technology, creativity, and ignition.</p>
+      <div class="dividerFlair">~ ✧ ~</div>
+      <p>You can follow this with the visuals in order:<br>
+          • The brief<br>
+          • Original<br>
+          • Revised 1<br>
+          • Revised 2<br>
+          • Final logo at full width
+      </p>
+      <img id="stellarCompare" src="assets/images/design/stellarNest/StellarNestCompare.png" alt="CozyPixel Assignment Mockup">
+      <img id="stellarLogo" src="assets/images/design/img8.png" alt="CozyPixel Laptop View">
+    </div>
+
+  </div>
+
+
+  <footer>
+    <div id="footerSocials">
+      <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/linkedIn.png" alt="LinkedIn"></a>
+      <a href="mailto:mintbanshee@gmail.com">
+        <img id="social" src="assets/images/shell/email-black.png" alt="Email"></a>
+      <a href="https://figma.com/@mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
+      <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
+        <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
+    </div>
+    <div id="footerText">
+      &copy; 2025 Alexandria McQueen — MintBanshee
+      <br>Crafted with care in VS Code
+    </div>
+  </footer>
+
+</body>
+</html>
