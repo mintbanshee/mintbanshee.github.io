@@ -49,32 +49,34 @@
     </div>
   </header>
 
-<div id="lightbox" onclick="hideBox();">
-    <div id="modalContent" onclick="event.stopPropagation()">
-      <div id="modalLeft">
-        <img id="lightboxImage" src="https://placehold.co/500" alt="Project Details Popup">
-      </div>
-      <div id="modalRight">
-        <h2 id="projectName"></h2>
-        <p id="projectDescription"></p>
-        <button id="viewProjectBtn" onclick="viewProject()">View Project</button>
-      </div>
-      <span id="closeBtn" onclick="hideBox()">&times;</span>
-    </div>
-   </div> 
-
-    <div id="projectHero">
-    <a href="designs.html" class="backLink">Back to Designs Page</a>
-      <h1>Star Wars Mockup</h1>
-      <h3>Promotional Web Mockup · Photoshop Layout · Cinematic Styling</h3>
-      <p>A cinematic homepage mockup created for a Photoshop layout assignment.
-        The design combines character photography, film branding, and structured navigation to simulate a promotional landing page for a Star Wars release.
-        The composition practices visual hierarchy, balance, and cohesive styling across header, gallery sections, and footer elements — resulting in a polished, magazine-style layout.</p>
-      <img id="starWarsFull" src="assets/images/design/starWarsFull.png" alt="Star Wars Assignment Mockup">
-    </div>
+  <div id="contactMain">
+    <h1>I Would Love to Hear From You!</h1>
+    <h3>I am currently seeking internship opportunities (May - August, 2026) and employment after my internship period.</h3>
+    <h3>I also am always open to feedback, I love to learn and grow!</h3>
+    <br><div class="dividerFlair">~ ✧ ~</div> 
+    <section id="contactFormSection">
+      <h2>Send Me a Message</h2>
+      <p class="contactIntro">
+        I would love to hear from you!  Whether you're reaching out about internships, collaboration, or feedback, 
+        please feel free to send a message using the form below.
+      </p>
+      <form id="mintForm"
+        action="mailto:mintbanshee@gmail.com"
+        method="post"
+        enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        <button type="submit" class="mintButton">Send Message</button>
+      </form>
+      <h2>Prefer direct links?</h2>
+      <p id="arrow">⇩</p>
+    </section>
 
   </div>
-
 
   <footer>
     <div id="footerSocials">

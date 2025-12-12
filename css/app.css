@@ -82,6 +82,7 @@ header {
 }
   #logoIMG {
     width: 350px;
+    animation: softPulse 2.2s ease-in-out infinite;
   }
   #social {
     width: 70px;
@@ -700,6 +701,83 @@ footer {
 
 
 
+/* ======= CONTACT PAGE ======= */
+
+#contactMain {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2rem 2rem;
+  width: 100%;
+  text-align: center;
+}
+  #contactMain p {
+    margin: 1rem auto;
+    max-width: 70%;
+  }
+#contactFormSection {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+#contactFormSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contactIntro {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+#mintForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+}
+#mintForm > label {
+  text-align: left;
+  font-weight: 600;
+  color: var(--mintbanshee-green);
+}
+#mintForm > input,
+#mintForm > textarea {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: rgba(255,255,255,0.7);
+  font-size: 1rem;
+}
+#mintForm > textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.mintButton {
+  padding: 0.9rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: var(--nightroot);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+.mintButton:hover {
+  background: var(--mintbanshee-green);
+}
+#arrow {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  animation: bounce 1.6s infinite ease-in-out;
+  display: inline-block;
+  color: var(--mintbanshee-green);
+}
+
+
 /* ======= MIXEDTAPE API ======= */
 
 #mixtapeTop {
@@ -728,6 +806,7 @@ footer {
 #musicButton {
   width: 140px;     
   cursor: pointer;  
+  animation: softPulse 2.2s ease-in-out infinite;
 }
 
 
@@ -887,6 +966,31 @@ footer {
 #midnightSS {
   width: 80%;
   margin-top: 25px;
+}
+
+
+
+/* ======= ANIMATIONS ======= */
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+@keyframes softPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08); /* gentle thump */
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
