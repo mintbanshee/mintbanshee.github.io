@@ -82,6 +82,13 @@ const projects = [
     Designed to reflect a whimsical, calm creative identity while staying versatile for web, print, and UI use.`,
     img: "assets/images/design/img9.png",
     link: "mintBanshee.html"},
+
+    {name: "Midnight at the Mintforge",
+    description: `A fully custom VS Code theme designed to transform the developer workspace into a cozy, lunar-coded atmosphere. 
+    
+    Features a handcrafted color palette inspired by mint leaves, twilight skies, and soft enchanted lighting — blending calm contrasts with clear syntax visibility for long, focused coding sessions.`,
+    img: "assets/images/design/img10.png",
+    link: "midnight.html"},
 ]
 
 function showBox(num) {
@@ -101,7 +108,10 @@ function hideBox() {
 function viewProject() {
   const item = projects[currentIndex];
   if (item.link) {
+    if (item.link.endsWith('.html')) {
+      window.location.href = item.link;
+    } else {
     window.open(item.link, "_blank");
+    }
   }
 }
-

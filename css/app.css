@@ -615,7 +615,22 @@ footer {
     height: auto !important; 
     object-fit: cover;
   }
-
+.backLink {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid var(--mintbanshee-green);
+  border-radius: 8px;
+  color: var(--shadowmint);
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.8rem;
+  transition: 0.2s ease;
+  margin: 0.5rem;
+}
+.projectLink:hover {
+  background: var(--moonbeam);
+  box-shadow: 0 0 6px var(--mintbanshee-green);
+}
 
 
 /* ======= LIGHTBOX ======= */
@@ -855,6 +870,24 @@ footer {
 
 
 
+/* ======= midnightAtTheMintforge ======= */
+
+#projectHero {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 2.5rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#midnightSS {
+  width: 80%;
+  margin-top: 25px;
+}
 
 
 
