@@ -513,7 +513,6 @@ footer {
   margin-top: 0.75rem;
   margin-bottom: 1rem;
 }
-
 .projectMedia {
   display: flex;
   flex-direction: row;
@@ -550,7 +549,8 @@ footer {
 
 #gallery {
   width: 100%;
-  max-width: 1300px; 
+  max-width: 1200px; 
+  margin-inline: auto;
   margin: 0 auto;
   padding-bottom: 5rem; 
   display: block;
@@ -569,7 +569,8 @@ footer {
   padding-bottom: 6rem;
 }
 #BotaniCuteThumb {
-  width: 360px;      
+  width: 100%;
+  max-width: 360px;      
   height: auto;  
   object-fit: cover;
   border-radius: 20px; 
@@ -578,7 +579,8 @@ footer {
   display: block;  
 }
 #ScribesHavenThumb {
-  width: 800px;      
+  width: 100%;
+  max-width: 800px;      
   height: auto;  
   object-fit: cover;
   border-radius: 20px; 
@@ -1024,6 +1026,24 @@ footer {
     font-size: 1.6rem;
   }
 }
+@media (max-width: 1315px) {
+  .codeThumb {
+    width: 425px;
+    height: 275px;
+  }
+  .projectMedia > video {
+    width: 425px;
+  }
+}
+@media (max-width: 1255px) {
+  .codeThumb {
+    width: 400px;
+    height: 250px;
+  }
+  .projectMedia > video {
+    width: 400px;
+  }
+}
 @media (max-width: 1225px) {
   #welcome h1 {
     font-size: 2.5rem;
@@ -1031,11 +1051,26 @@ footer {
   #projectThumb {
     width: 500px;
   }
+  #designsRow {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 }
 @media (max-width: 1210px) {
   #contactMain h3 {
     font-size: 1.4rem;
   }
+}
+@media (max-width: 1190px) {
+  .codeThumb {
+    width: 350px;
+    height: 200px;
+  }
+  .projectMedia > video {
+    width: 350px;
+  }
+#designMain #featureCard {
+  width: 60%;
+}
 }
 @media (max-width: 1070px) {
   #contactMain h3 {
@@ -1044,12 +1079,31 @@ footer {
   #contactFormSection {
       padding: 1rem;
   }
+  .codeCard {
+    width: 75%;
+  }
+  .codeThumb {
+    width: 300px;
+    height: 150px;
+  }
+  .projectMedia > video {
+    width: 300px;
+  }
 }
 @media (max-width: 1040px) {
   #welcome h1 {
     font-size: 2rem;
   }
   #projectThumb {
+    width: 400px;
+  }
+}
+@media (max-width: 1000px) {
+  .codeThumb {
+    width: 400px;
+    height: 200px;
+  }
+  .projectMedia > video {
     width: 400px;
   }
 }
@@ -1107,10 +1161,16 @@ footer {
   #projectsTop p {
     font-size: 0.9rem;
   }
+  .codeCard {
+    width: 70%;
+  }
 }
 @media (max-width: 830px) {
   .projectsThumbnail {
     width: 120px;
+  }
+  .codeCard p {
+    font-size: 1rem;
   }
 }
 @media (max-width: 805px) {
@@ -1174,6 +1234,13 @@ footer {
   #contactFormSection {
       max-width: 550px;
   }
+  .codeThumb {
+    width: 350px;
+    height: 175px;
+  }
+  .projectMedia > video {
+    width: 350px;
+  }
 }
 @media (max-width: 765px) {
   #welcome h1 {
@@ -1187,6 +1254,13 @@ footer {
   }
   #welcome p {
     font-size: 1rem;
+  }
+  .projectSkillsRow {
+    gap: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .projectSkillRow span {
+    padding: 0.15rem 0.2rem;
   }
 }
 @media (max-width: 730px) {
@@ -1225,6 +1299,12 @@ footer {
   #buttonRow {
     gap: 1.4rem;
   }
+  .codeCard h1 {
+    font-size: 2rem;
+  }
+  .codeCard h2 {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 680px) {
   #social {
@@ -1252,6 +1332,23 @@ footer {
   }
   #bioImg {
     width: 200px;
+  }
+  .projectSkillsRow {
+    gap: 0.4rem;
+    font-size: 0.6rem;
+  }
+  .projectSkillRow span {
+    padding: 0.10rem 0rem;
+  }
+  .codeThumb {
+    width: 300px;
+    height: 150px;
+  }
+  .projectMedia > video {
+    width: 300px;
+  }
+  .codeCard p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 655px) {
@@ -1300,7 +1397,7 @@ footer {
     font-size: 1rem;
   }
 }
-@media (max-width: 570px) {
+@media (max-width: 580px) {
   #dualityIMG {
     width: 200px;
   }
@@ -1314,6 +1411,23 @@ footer {
     font-size: 1rem;
   }
   #projectsTop p {
+    font-size: 0.6rem;
+  }
+  .projectSkillsRow {
+    gap: 0.2rem;
+    font-size: 0.4rem;
+  }
+  .projectSkillRow span {
+    padding: 0;
+  }
+  .codeThumb {
+    width: 250px;
+    height: 150px;
+  }
+  .projectMedia > video {
+    width: 250px;
+  }
+  .codeCard p {
     font-size: 0.6rem;
   }
 }
@@ -1349,6 +1463,17 @@ footer {
   }
   .projectLink {
     margin-bottom: 2rem;
+  }
+  .codeCard h1 {
+    font-size: 1.5rem;
+  }
+  .codeCard h2 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 510px) {
+  .projectMedia > video {
+    width: 225px;
   }
 }
 @media (max-width: 490px) {
@@ -1464,8 +1589,20 @@ footer {
     width: 60px;
     height: 50px;
   }
+  .codeCard {
+    width: 75%;
+  }
 }
-@media (max-width: 430px) {
+@media (max-width: 450px) {
+  .codeThumb {
+    width: 200px;
+    height: 125px;
+  }
+  .projectMedia > video {
+    width: 200px;
+  }
+}
+@media (max-width: 435px) {
   #aboutWelcome > h1 {
     font-size: 2rem;
   }
@@ -1490,5 +1627,29 @@ footer {
   }
   #projectsTop h2 {
     font-size: 0.7rem;
+  }
+  .codeCard h1 {
+    font-size: 1.2rem;
+  }
+  .codeCard h2 {
+    font-size: 1rem;
+  }
+  .codeCard p {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 390px) {
+  #social {
+    width: 25px;
+    margin: 3px;
+  }
+  #welcome h2 {
+    font-size: 0.8rem;
+  }
+  #welcome h3 {
+    font-size: 0.8rem;
+  }
+  #projectsTop h2 {
+    font-size: 0.6rem;
   }
 }
