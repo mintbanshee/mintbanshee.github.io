@@ -47,7 +47,7 @@ const projects = [
     
     Includes mood boards, logo refinement, and a cohesive visual identity built around a custom compass-rose emblem.`,
     img: "assets/images/design/img5.png",
-    link: "https://mintbanshee.github.io/HTML_Assignment_4/"},
+    link: "https://mintbanshee.github.io/DriftwoodAtlas/"},
     
    {name: "Style Salon",
     description: `A minimal logo and brand concept for a boutique hair studio.
