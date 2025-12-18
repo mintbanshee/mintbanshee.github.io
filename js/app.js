@@ -1,4 +1,7 @@
 
+// ==============================================
+// =============== Nav Menu ================ 
+
 let menuOpen = false;
 function toggleMenu() { 
   if(!menuOpen) { 
@@ -8,6 +11,10 @@ function toggleMenu() {
   }
   menuOpen = !menuOpen; 
 } // toggleMenu()
+
+
+// ==============================================
+// =============== Design Projects ================ 
 
 let currentIndex = null;
 
@@ -107,5 +114,52 @@ function viewProject() {
     } else {
     window.open(item.link, "_blank");
     }
+  }
+}
+
+
+// ==============================================
+// =============== API Assignment ================ 
+
+const calmBtn = document.querySelector('.musicButton.calm');
+const chaoticBtn = document.querySelector('.musicButton.chaotic');
+
+if (calmBtn && chaoticBtn) {
+  function saveCalm() {
+    localStorage.setItem('coderType', 'calm');
+
+    calmBtn.classList.add('selected');
+    chaoticBtn.classList.remove('selected');
+
+    document.querySelectorAll('.musicButton').forEach(button => {
+      button.classList.remove('pulse');
+    });
+  }
+
+  function saveChaotic() {
+    localStorage.setItem('coderType', 'chaotic');
+
+    chaoticBtn.classList.add('selected');
+    calmBtn.classList.remove('selected');
+
+    document.querySelectorAll('.musicButton').forEach(button => {
+      button.classList.remove('pulse');
+    });
+  }
+
+  calmBtn.addEventListener('click', saveCalm);
+  chaoticBtn.addEventListener('click', saveChaotic);
+
+  const savedCoder = localStorage.getItem('coderType');
+  const buttons = document.querySelectorAll('.musicButton');
+
+  if (!savedCoder) {
+    buttons.forEach(button => {
+      button.classList.add('pulse');
+    });
+  } else if (savedCoder === 'calm') {
+    calmBtn.classList.add('selected');
+  } else if (savedCoder === 'chaotic') {
+    chaoticBtn.classList.add('selected');
   }
 }
