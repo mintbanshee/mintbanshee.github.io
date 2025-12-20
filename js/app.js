@@ -118,8 +118,8 @@ function viewProject() {
 }
 
 
-// ==============================================
-// =============== API Assignment ================ 
+// ====================================================
+// =============== API Assignment BASE ================ 
 
 const calmBtn = document.querySelector('.musicButton.calm');
 const chaoticBtn = document.querySelector('.musicButton.chaotic');
@@ -127,39 +127,329 @@ const chaoticBtn = document.querySelector('.musicButton.chaotic');
 if (calmBtn && chaoticBtn) {
   function saveCalm() {
     localStorage.setItem('coderType', 'calm');
-
-    calmBtn.classList.add('selected');
-    chaoticBtn.classList.remove('selected');
+    showCalmUI();
 
     document.querySelectorAll('.musicButton').forEach(button => {
       button.classList.remove('pulse');
     });
   }
+function showCalmUI() {
+  document.querySelector('#playlistResults').innerHTML = '<h3>Calm Coder Selected</h3>';
+  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/CalmVibes.png';
 
-  function saveChaotic() {
-    localStorage.setItem('coderType', 'chaotic');
-
-    chaoticBtn.classList.add('selected');
-    calmBtn.classList.remove('selected');
-
-    document.querySelectorAll('.musicButton').forEach(button => {
-      button.classList.remove('pulse');
-    });
-  }
-
-  calmBtn.addEventListener('click', saveCalm);
-  chaoticBtn.addEventListener('click', saveChaotic);
-
-  const savedCoder = localStorage.getItem('coderType');
-  const buttons = document.querySelectorAll('.musicButton');
-
-  if (!savedCoder) {
-    buttons.forEach(button => {
-      button.classList.add('pulse');
-    });
-  } else if (savedCoder === 'calm') {
-    calmBtn.classList.add('selected');
-  } else if (savedCoder === 'chaotic') {
-    chaoticBtn.classList.add('selected');
-  }
+  calmBtn.classList.add('selected');
+  chaoticBtn.classList.remove('selected');
 }
+
+
+
+
+function saveChaotic() {
+  localStorage.setItem('coderType', 'chaotic');
+  showChaoticUI();
+
+  document.querySelectorAll('.musicButton').forEach(button => {
+    button.classList.remove('pulse');
+  });
+}
+
+function showChaoticUI() {
+  document.querySelector('#playlistResults').innerHTML = '<h3>Chaotic Coder Selected</h3>';
+  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/ChaoticVibes.png';
+
+  chaoticBtn.classList.add('selected');
+  calmBtn.classList.remove('selected');
+}
+
+
+
+calmBtn.addEventListener('click', saveCalm);
+chaoticBtn.addEventListener('click', saveChaotic);
+
+const savedCoder = localStorage.getItem('coderType');
+const buttons = document.querySelectorAll('.musicButton');
+
+if (!savedCoder) {
+  buttons.forEach(button => {
+    button.classList.add('pulse');
+  });
+} else if (savedCoder === 'calm') {
+  calmBtn.classList.add('selected');
+  showCalmUI();
+} else if (savedCoder === 'chaotic') {
+  chaoticBtn.classList.add('selected');
+  showChaoticUI();
+}
+}
+
+// ====================================================
+// =============== API Assignment CALM ================ 
+
+// Temporary Placement - just so I don't lose these when I need them 
+// const url = `https://www.youtube.com/watch?v=${song.videoId}&list=PLAYLIST_ID&index=${song.index}`;
+// const videoThmb = `https://img.youtube.com/vi/${song.videoId}/default.jpg`;
+
+
+const calmPlaylist = [
+  {name: "What Does It Mean To You",
+    artist: "Carpetman",
+    length: "4:00", 
+    videoId: "5FSHSfSnjXk",
+    index: 1},
+
+  {name: "Serotonin",
+    artist: "Nic D",
+    length: "2:31", 
+    videoId: "5icwAPtuQ",
+    index: 2},
+
+  {name: "Tails - Second Thoughts",
+    artist: "MrSuicideSheep",
+    length: "4:12", 
+    videoId: "MVW8RngLA",
+    index: 3},
+
+  {name: "Howling",
+    artist: "Noah Kahan",
+    length: "4:45", 
+    videoId: "sp7uSknDFE8",
+    index: 4},
+
+  {name: "False Confidence",
+    artist: "Noah Kahan",
+    length: "3:43", 
+    videoId: "dWRWuY3pV2c",
+    index: 5},
+
+  {name: "Love Language",
+    artist: "Crooked Colours",
+    length: "3:18", 
+    videoId: "DkErGeZlfAI",
+    index: 6},
+
+  {name: "Make It Lower",
+    artist: "Carpetman",
+    length: "4:07", 
+    videoId: "o5NDhQgVzoo",
+    index: 7},
+
+  {name: "Watch Me While I Bloom",
+    artist: "Hayley Williams",
+    length: "3:44", 
+    videoId: "Z6q2AiFJKUU",
+    index: 8},
+
+  {name: "Elliot Lee - My Favourite Things",
+    artist: "MrSuicideSheep",
+    length: "2:33", 
+    videoId: "04rC2zYVIIA",
+    index: 9},
+
+  {name: "Hollow Coves - Heatwave (filous remix)",
+    artist: "MrSuicideSheep",
+    length: "5:02", 
+    videoId: "Pe7ZzNx-FTE",
+    index: 10},
+
+  {name: "Stones",
+    artist: "Rooftime",
+    length: "3:07", 
+    videoId: "1A0vpHiPO3k",
+    index: 11},
+
+  {name: "Seven Lions - Between (feat. Eli Teplin)",
+    artist: "MrSuicideSheep",
+    length: "3:57", 
+    videoId: "vBcgLvjzNR4",
+    index: 12},
+
+  {name: "Figment Of My Mind",
+    artist: "Bruno Major",
+    length: "3:35", 
+    videoId: "kh_20OLEHCM",
+    index: 13},
+
+  {name: "Burn Away",
+    artist: "Patrick James",
+    length: "4:38", 
+    videoId: "1XIM96ruN0k",
+    index: 14},
+
+  {name: "Yas - Empty Crown",
+    artist: "MrSuicideSheep",
+    length: "3:38", 
+    videoId: "m_qlgFQs7E4",
+    index: 15},
+
+  {name: "Two Lanes - Wide Awake",
+    artist: "Arctic Empire",
+    length: "2:52", 
+    videoId: "o32Z_0LyivE",
+    index: 16},
+
+  {name: "The Garden",
+    artist: "Stonefox",
+    length: "3:39", 
+    videoId: "b8HnvGgje0Q",
+    index: 17},
+
+  {name: "Lights (feat. Trove",
+    artist: "Dabin",
+    length: "3:25", 
+    videoId: "At3yj4CFP1Y",
+    index: 18},
+
+  {name: "Fragments",
+    artist: "Nomyn",
+    length: "3:46", 
+    videoId: "jaCIKpsKpaQ",
+    index: 19},
+
+  {name: "Iris",
+    artist: "Tommee Profitt",
+    length: "4:07", 
+    videoId: "BysZfSSRN_M",
+    index: 20},
+
+  {name: "Lane 8 - The Rope feat. Poliça",
+    artist: "This Never Happened",
+    length: "4:55", 
+    videoId: "yjiKufgOHNw",
+    index: 21},
+];
+
+
+
+
+
+
+// ====================================================
+// =============== API Assignment CHAOTIC ================ 
+
+const chaoticPlaylist = [
+{name: "Roller Coaster",
+    artist: "blink-182",
+    length: "2:47", 
+    videoId: "xBb2lHxTRf8",
+    index: 1},
+
+  {name: "The Kill",
+    artist: "Thirty Seconds To Mars",
+    length: "3:51", 
+    videoId: "nIxxdRaWoBs",
+    index: 2},
+
+  {name: "Maleficent",
+    artist: "Halocene",
+    length: "4:11", 
+    videoId: "9idIkloO8-8",
+    index: 3},
+
+  {name: "sTraNgeRs",
+    artist: "Bring Me The Horizon",
+    length: "3:24", 
+    videoId: "FsNGxsrcZas",
+    index: 4},
+
+  {name: "Gimme Chocolate!!",
+    artist: "BabyMetal",
+    length: "4:03", 
+    videoId: "WIKqgE4BwAY",
+    index: 5},
+
+  {name: "Given Up",
+    artist: "Linkin Park",
+    length: "3:11", 
+    videoId: "0xyxtzD54rM",
+    index: 6},
+
+  {name: "Cannonball",
+    artist: "Avril Lavigne",
+    length: "2:18", 
+    videoId: "iBdgpdGTIwI",
+    index: 7},
+
+  {name: "Dance, Dance",
+    artist: "Fall Out Boy",
+    length: "3:00", 
+    videoId: "P43XYXqJJlU",
+    index: 8},
+
+  {name: "Discotech",
+    artist: "Young Love",
+    length: "3:54", 
+    videoId: "0zI1ZatpWqI",
+    index: 9},
+
+  {name: "Sleeping With Sirens - If I'm James Dean, You're Audrey Hapburn (Lauren Babic & @tysondang cover)",
+    artist: "Lauren Babic",
+    length: "3:38", 
+    videoId: "uNXMRFiuFGM",
+    index: 10},
+
+  {name: "Megitsune",
+    artist: "BabyMetal",
+    length: "4:09", 
+    videoId: "cK3NMZAUKGw",
+    index: 11},
+
+  {name: "Coming Home",
+    artist: "Falling In Reverse",
+    length: "5:02", 
+    videoId: "L3QB4VnUOUA",
+    index: 12},
+
+  {name: "Can You Feel My Heart",
+    artist: "Bring Me The Horizon",
+    length: "3:48", 
+    videoId: "QJJYpsA5tv8",
+    index: 13},
+
+  {name: "The Kids Aren't Alright",
+    artist: "The Offspring",
+    length: "2:59", 
+    videoId: "7iNbnineUCI",
+    index: 14},
+
+  {name: "Reckless Abandon",
+    artist: "blink-182",
+    length: "3:06", 
+    videoId: "csO9ZNuqiMY",
+    index: 15},
+
+  {name: "That's What You Get",
+    artist: "Paramore",
+    length: "3:39", 
+    videoId: "1kz6hNDlEEg",
+    index: 16},
+
+  {name: "Swing, Swing",
+    artist: "The All-American Rejects",
+    length: "3:27", 
+    videoId: "KtypSRcwIhA",
+    index: 17},
+
+  {name: "Smooth Criminal",
+    artist: "Alien Ant Farm",
+    length: "3:32", 
+    videoId: "CDl9ZMfj6aE",
+    index: 18},
+
+  {name: "Brick By Boring Brick",
+    artist: "Paramore",
+    length: "4:22", 
+    videoId: "A63VwWz1ij0",
+    index: 19},
+
+  {name: "Accidents",
+    artist: "Alexis on Fire",
+    length: "4:09", 
+    videoId: "pEKEYbszVyg",
+    index: 20},
+
+  {name: "The Jester",
+    artist: "Badflower",
+    length: "4:17", 
+    videoId: "b3tW2Kx3lCs",
+    index: 21},
+];
