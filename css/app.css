@@ -793,7 +793,6 @@ footer {
 }
 
 
-
 /* ======= MIXEDTAPE API ======= */
 
 #mixtapeTop {
@@ -829,6 +828,79 @@ footer {
   .musicButton.selected {
     box-shadow: 0 0 6px var(--mintbanshee-green);
   }
+#resetMixtape {
+  background: none;
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  border: 2px solid var(--mintbanshee-green);
+  border-radius: 8px;
+  color: var(--shadowmint);
+  text-decoration: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#resetMixtape:hover {
+  background: var(--moonbeam);
+  box-shadow: 0 0 6px var(--mintbanshee-green);
+}
+#playlistResults {
+  background: rgba(247, 245, 242, 0.25);
+  border: 2px solid var(--mintbanshee-green);
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);  
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18),
+              0 0 16px rgba(125, 176, 146, 0.4);
+  padding: 1.5rem 2rem 1.25rem;
+  width: 70%;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+  #playlistResults > h2 {
+    text-decoration: underline;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+  }
+.songRow {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+  .songRow:hover {
+    background-color: var(--moonmilk);
+  }
+.songInfo {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+  .songInfo h4 {
+    margin: 0;
+    font-weight: 500;
+    color: var(--nightroot);
+  }
+  .songInfo p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    color: var(--nightroot);
+  }
+.songThumb {
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
 
 /* ======= Recent Songs Lightbox ======= */
 

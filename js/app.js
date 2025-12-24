@@ -118,77 +118,11 @@ function viewProject() {
 }
 
 
-// ====================================================
-// =============== API Assignment BASE ================ 
-
-const calmBtn = document.querySelector('.musicButton.calm');
-const chaoticBtn = document.querySelector('.musicButton.chaotic');
-
-if (calmBtn && chaoticBtn) {
-  function saveCalm() {
-    localStorage.setItem('coderType', 'calm');
-    showCalmUI();
-
-    document.querySelectorAll('.musicButton').forEach(button => {
-      button.classList.remove('pulse');
-    });
-  }
-function showCalmUI() {
-  document.querySelector('#playlistResults').innerHTML = '<h3>Calm Coder Selected</h3>';
-  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/CalmVibes.png';
-
-  calmBtn.classList.add('selected');
-  chaoticBtn.classList.remove('selected');
-}
 
 
-
-
-function saveChaotic() {
-  localStorage.setItem('coderType', 'chaotic');
-  showChaoticUI();
-
-  document.querySelectorAll('.musicButton').forEach(button => {
-    button.classList.remove('pulse');
-  });
-}
-
-function showChaoticUI() {
-  document.querySelector('#playlistResults').innerHTML = '<h3>Chaotic Coder Selected</h3>';
-  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/ChaoticVibes.png';
-
-  chaoticBtn.classList.add('selected');
-  calmBtn.classList.remove('selected');
-}
-
-
-
-calmBtn.addEventListener('click', saveCalm);
-chaoticBtn.addEventListener('click', saveChaotic);
-
-const savedCoder = localStorage.getItem('coderType');
-const buttons = document.querySelectorAll('.musicButton');
-
-if (!savedCoder) {
-  buttons.forEach(button => {
-    button.classList.add('pulse');
-  });
-} else if (savedCoder === 'calm') {
-  calmBtn.classList.add('selected');
-  showCalmUI();
-} else if (savedCoder === 'chaotic') {
-  chaoticBtn.classList.add('selected');
-  showChaoticUI();
-}
-}
 
 // ====================================================
 // =============== API Assignment CALM ================ 
-
-// Temporary Placement - just so I don't lose these when I need them 
-// const url = `https://www.youtube.com/watch?v=${song.videoId}&list=PLAYLIST_ID&index=${song.index}`;
-// const videoThmb = `https://img.youtube.com/vi/${song.videoId}/default.jpg`;
-
 
 const calmPlaylist = [
   {name: "What Does It Mean To You",
@@ -200,13 +134,13 @@ const calmPlaylist = [
   {name: "Serotonin",
     artist: "Nic D",
     length: "2:31", 
-    videoId: "5icwAPtuQ",
+    videoId: "i-5icwAPtuQ",
     index: 2},
 
   {name: "Tails - Second Thoughts",
     artist: "MrSuicideSheep",
     length: "4:12", 
-    videoId: "MVW8RngLA",
+    videoId: "m-MVW8RngLA",
     index: 3},
 
   {name: "Howling",
@@ -453,3 +387,119 @@ const chaoticPlaylist = [
     videoId: "b3tW2Kx3lCs",
     index: 21},
 ];
+
+
+// ====================================================
+// =============== API Assignment BASE ================ 
+
+const calmBtn = document.querySelector('.musicButton.calm');
+const chaoticBtn = document.querySelector('.musicButton.chaotic');
+
+console.log(calmBtn, chaoticBtn);
+
+if (calmBtn && chaoticBtn) {
+  function saveCalm() {
+    localStorage.setItem('coderType', 'calm');
+    showCalmUI();
+
+    document.querySelectorAll('.musicButton').forEach(button => {
+      button.classList.remove('pulse');
+    });
+  }
+}
+
+function showCalmUI() {
+  document.querySelector('#playlistResults').innerHTML = '';
+  document.querySelector('#playlistResults').innerHTML = '<h2>Mintforge Calm Coder Mix</h2>';
+  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/CalmVibes.png';
+
+  calmBtn.classList.add('selected');
+  chaoticBtn.classList.remove('selected');
+
+  calmPlaylist.forEach(song => {
+    const videoUrl = `https://www.youtube.com/watch?v=${song.videoId}&list=PLAYLIST_ID&index=${song.index}`;
+    const videoThmb = `https://img.youtube.com/vi/${song.videoId}/default.jpg`;
+
+    document.querySelector('#playlistResults').innerHTML += `
+      <a href="${videoUrl}" target="_blank" class="songRow">
+      <img class="songThumb" src="${videoThmb}" alt="${song.name} thumbnail">
+        <div class="songInfo">
+          <h4>${song.name}</h4>
+          <p>${song.artist} • ${song.length}</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+
+function saveChaotic() {
+  localStorage.setItem('coderType', 'chaotic');
+  showChaoticUI();
+
+  document.querySelectorAll('.musicButton').forEach(button => {
+    button.classList.remove('pulse');
+  });
+}
+
+function showChaoticUI() {
+  document.querySelector('#playlistResults').innerHTML = '';
+  document.querySelector('#playlistResults').innerHTML = '<h2>Mintforge Chaotic Coder Mix</h2>';
+  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/ChaoticVibes.png';
+
+  chaoticBtn.classList.add('selected');
+  calmBtn.classList.remove('selected');
+
+  chaoticPlaylist.forEach(song => {
+    const videoUrl = `https://www.youtube.com/watch?v=${song.videoId}&list=PLAYLIST_ID&index=${song.index}`;
+    const videoThmb = `https://img.youtube.com/vi/${song.videoId}/default.jpg`;
+
+    document.querySelector('#playlistResults').innerHTML += `
+      <a href="${videoUrl}" target="_blank" class="songRow">
+      <img class="songThumb" src="${videoThmb}" alt="${song.name} thumbnail">
+        <div class="songInfo">
+          <h4>${song.name}</h4>
+          <p>${song.artist} • ${song.length}</p>
+        </div>
+      </a>
+    `;
+  });
+}
+
+
+calmBtn.addEventListener('click', saveCalm);
+chaoticBtn.addEventListener('click', saveChaotic);
+
+const savedCoder = localStorage.getItem('coderType');
+const buttons = document.querySelectorAll('.musicButton');
+
+if (!savedCoder) {
+  buttons.forEach(button => {
+    button.classList.add('pulse');
+  });
+} else if (savedCoder === 'calm') {
+  calmBtn.classList.add('selected');
+  showCalmUI();
+} else if (savedCoder === 'chaotic') {
+  chaoticBtn.classList.add('selected');
+  showChaoticUI();
+}
+
+const resetBTN = document.querySelector('#resetMixtape');
+
+function resetMixtape() {
+  localStorage.removeItem('coderType');
+
+  document.querySelector('#playlistResults').innerHTML = '';
+  document.querySelector('#playlistResults').innerHTML = '<h2>No Playlist Selected</h2>';
+  document.querySelector('#dualityIMG').src = 'assets/images/mixtape/CalmOrChaotic.png';
+
+  calmBtn.classList.remove('selected');
+  chaoticBtn.classList.remove('selected');
+
+  document.querySelectorAll('.musicButton').forEach(button => {
+    button.classList.add('pulse');
+  });
+}
+
+resetBTN.addEventListener('click', resetMixtape); 
