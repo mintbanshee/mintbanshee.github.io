@@ -811,7 +811,7 @@ footer {
   background: #E3E8E7;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-size: 1.6em;
+  font-size: 1.6rem;
   border-bottom: 2px solid var(--mintbanshee-green);
   padding: 1rem 2rem;
   width: 100%;
@@ -1334,6 +1334,30 @@ footer {
   .codeCard {
     width: 70%;
   }
+  .songThumb {
+    width: 80px;
+    height: 60px;
+  }
+  .songInfo {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 850px) {
+  #mixtapeIntro h2 {
+    font-size: 1.6rem;
+  }
+  #mixtapeIntro h1 {
+    font-size: 1.8rem;
+  }
+  #mixtapeIntro p {
+    font-size: 1rem;
+  }
+  #recentlyPlayed li {
+    font-size: 1rem;
+  }
+  #playlistResults h2 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 830px) {
   .projectsThumbnail {
@@ -1411,6 +1435,16 @@ footer {
   .projectMedia > video {
     width: 350px;
   }
+  .songThumb {
+    width: 70px;
+    height: 50px;
+  }
+  .songInfo {
+    font-size: 1rem;
+  }
+  .songInfo p {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 765px) {
   #welcome h1 {
@@ -1474,6 +1508,12 @@ footer {
   }
   .codeCard h2 {
     font-size: 1.5rem;
+  }
+  #mixtapeIntro h2 {
+    font-size: 1.4rem;
+  }
+  #playlistResults {
+    width: 90%;
   }
 }
 @media (max-width: 680px) {
@@ -1560,11 +1600,42 @@ footer {
     width: 80px;
     height: 70px;
   }
+  #mixtapeIntro h2 {
+    font-size: 1.2rem;
+  }
+  #mixtapeIntro h1 {
+    font-size: 1.6rem;
+  }
+  #mixtapeIntro p {
+    font-size: 0.8rem;
+  }
+  #recentlyPlayed li {
+    font-size: 0.8rem;
+  }
+  #playlistResults h2 {
+    font-size: 1.6rem;
+  }
+#dualityIMG {
+  width: 220px;
+}
+.musicButton {
+  width: 120px;
+}
 }
 @media (max-width: 610px) {
   #aboutWelcome p {
     margin: 0 auto;
     font-size: 1rem;
+  }
+  .songThumb {
+    width: 50px;
+    height: 30px;
+  }
+  .songInfo {
+    font-size: 0.8rem;
+  }
+  .songInfo p {
+    font-size: 0.6rem;
   }
 }
 @media (max-width: 580px) {
@@ -1599,6 +1670,18 @@ footer {
   }
   .codeCard p {
     font-size: 0.6rem;
+  }
+  #playlistResults {
+    width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  #mixtapeIntro h2 {
+    font-size: 1rem;
+  }
+  #buttonRow {
+    flex-direction: column;
+    gap: 1.25rem;
   }
 }
 @media (max-width: 550px) {
@@ -1741,7 +1824,7 @@ footer {
     font-size: 1.2rem;
   }
   #mixtapeTop p {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
   #mixtapeTop h1 {
     font-size: 2.5rem;
@@ -1762,6 +1845,31 @@ footer {
   .codeCard {
     width: 75%;
   }
+  #mixtapeIntro h2 {
+    font-size: 1rem;
+  }
+  #mixtapeIntro h1 {
+    font-size: 1.4rem;
+  }
+  #mixtapeIntro p {
+    font-size: 0.6rem;
+  }
+  #recentlyPlayed li {
+    font-size: 0.8rem;
+  }
+  #playlistResults h2 {
+    font-size: 1.2rem;
+  }
+  .songThumb {
+    width: 40px;
+    height: 20px;
+  }
+  .songInfo {
+    font-size: 0.7rem;
+  }
+  .songInfo p {
+    font-size: 0.4rem;
+  }
 }
 @media (max-width: 450px) {
   .codeThumb {
@@ -1771,6 +1879,7 @@ footer {
   .projectMedia > video {
     width: 200px;
   }
+
 }
 @media (max-width: 435px) {
   #aboutWelcome > h1 {
@@ -1807,6 +1916,28 @@ footer {
   .codeCard p {
     font-size: 0.5rem;
   }
+  #recentlyPlayed li {
+    font-size: 0.7rem;
+  }
+  #mixtapeIntro h2 {
+    font-size: 0.8rem;
+  }
+  #mixtapeIntro h1 {
+    font-size: 1.2rem;
+  }
+  #mixtapeIntro p {
+    font-size: 0.5rem;
+  }
+  #playlistResults h2 {
+    font-size: 1rem;
+  }
+  #dualityIMG {
+    width: 150px;
+  }
+  .musicButton {
+    width: 70px;
+  }
+  
 }
 @media (max-width: 390px) {
   #social {
@@ -1820,6 +1951,9 @@ footer {
     font-size: 0.8rem;
   }
   #projectsTop h2 {
+    font-size: 0.6rem;
+  }
+  #recentlyPlayed li {
     font-size: 0.6rem;
   }
 }
