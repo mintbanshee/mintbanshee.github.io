@@ -807,6 +807,41 @@ footer {
   place-items: center;
   text-align: center;
 }
+#mixtapeIntro {
+  background: #E3E8E7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, var(--mistveil), var(--moonmilk));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, var(--mistveil), var(--moonmilk)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.6em;
+  border-bottom: 2px solid var(--mintbanshee-green);
+  padding: 1rem 2rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+#recentlyPlayed {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+  #recentlyPlayed ul {  
+  list-style: none;
+  padding: 0;
+  }
+  #recentlyPlayed li {
+    margin: 0.3rem 0;
+    opacity: 0.85;
+    font-size: 1.2rem;
+  }
+  #recentlyPlayed a {
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--shadowmint)
+  }
+    #recentlyPlayed a:hover {
+      background-color: var(--moonmilk);
+      opacity: 1;
+      color: var(--nightroot);
+    }
 #buttonRow {
   display: flex;
   justify-content: center;
@@ -901,6 +936,8 @@ footer {
   border-radius: 8px;
   flex-shrink: 0;
 }
+
+
 
 /* ======= Recent Songs Lightbox ======= */
 

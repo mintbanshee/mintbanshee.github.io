@@ -390,10 +390,84 @@ const chaoticPlaylist = [
 
 
 // ====================================================
-// =============== API Assignment BASE ================ 
+// =============== API Assignment ================ 
+
+const youtubeAPIKey = 'AIzaSyBdDFEvo1GjjyFjogZ8HksX7s_HdOxb-T0';
+const calmPlaylistId = 'PLO1iWpsX1PjRLFMng8WjkKNSujIjk6TJV';
+const chaoticPlaylistId = 'PLO1iWpsX1PjQji3_hWIpazvyWS7eWN2iy';
+let calmAPIPlaylist = null;
+let chaoticAPIPlaylist = null;
+let isCalmLoading = false;
+let isChaoticLoading = false;
+
 
 const calmBtn = document.querySelector('.musicButton.calm');
 const chaoticBtn = document.querySelector('.musicButton.chaotic');
+
+function fetchCalmPlaylist() {
+  isCalmLoading = true;
+  fetch(
+    `https://www.googleapis.com/youtube/v3/playlistItems?` +
+    `part=snippet&maxResults=25&playlistId=${calmPlaylistId}&key=${youtubeAPIKey}`
+  )
+    .then(res => res.json())
+    .then(data => {
+      console.log('YouTube playlist data:', data);
+
+      calmAPIPlaylist = data.items.map((item, index) => {
+        return {
+          name: item.snippet.title,
+          artist: item.snippet.videoOwnerChannelTitle,
+          videoId: item.snippet.resourceId.videoId,
+          index: index + 1
+        };
+      });
+
+      isCalmLoading = false;
+    
+      if (localStorage.getItem('coderType') === 'calm') {
+        showCalmUI();
+      }
+
+      console.log('Saved calm API playlist:', calmAPIPlaylist);
+      console.log("Formatted API playlist:", calmAPIPlaylist);
+    })
+    .catch(err => {
+      console.error('API error:', err);
+    });
+}
+function fetchChaoticPlaylist() {
+  isChaoticLoading = true;
+  fetch(
+    `https://www.googleapis.com/youtube/v3/playlistItems?` +
+    `part=snippet&maxResults=25&playlistId=${chaoticPlaylistId}&key=${youtubeAPIKey}`
+  )
+    .then(res => res.json())
+    .then(data => {
+      console.log('YouTube playlist data:', data);
+
+      chaoticAPIPlaylist = data.items.map((item, index) => {
+        return {
+          name: item.snippet.title,
+          artist: item.snippet.videoOwnerChannelTitle,
+          videoId: item.snippet.resourceId.videoId,
+          index: index + 1
+        };
+      });
+
+      isChaoticLoading = false;
+
+      if (localStorage.getItem('coderType') === 'chaotic') {
+        showChaoticUI();
+      }
+
+      console.log('Saved chaotic API playlist:', chaoticAPIPlaylist);
+      console.log("Formatted API playlist:", chaoticAPIPlaylist);
+    })
+    .catch(err => {
+      console.error('API error:', err);
+    });
+  }
 
 console.log(calmBtn, chaoticBtn);
 
@@ -408,7 +482,22 @@ if (calmBtn && chaoticBtn) {
   }
 }
 
+function saveRecentlyPlayed(song, playlistType) {
+  const stored = JSON.parse(localStorage.getItem('recentlyPlayed')) || [];
+  const filtered = stored.filter(item => item.videoId !== song.videoId);
+
+  filtered.unshift({...song, playlist: playlistType});
+
+  const trimmed = filtered.slice(0, 3);
+
+  localStorage.setItem('recentlyPlayed', JSON.stringify(trimmed));
+}
+
+
+
+
 function showCalmUI() {
+  document.querySelector('#mixtapeIntro').style.display = 'none';
   document.querySelector('#playlistResults').innerHTML = '';
   document.querySelector('#playlistResults').innerHTML = '<h2>Mintforge Calm Coder Mix</h2>';
   document.querySelector('#dualityIMG').src = 'assets/images/mixtape/CalmVibes.png';
@@ -416,16 +505,20 @@ function showCalmUI() {
   calmBtn.classList.add('selected');
   chaoticBtn.classList.remove('selected');
 
-  calmPlaylist.forEach(song => {
-    const videoUrl = `https://www.youtube.com/watch?v=${song.videoId}&list=PLAYLIST_ID&index=${song.index}`;
+  const playlistToRender = calmAPIPlaylist ?? calmPlaylist;
+
+  playlistToRender.forEach(song => {
+    const videoUrl = `https://www.youtube.com/watch?v=${song.videoId}` + `&list=${calmPlaylistId}` + `&index=${song.index}`;
     const videoThmb = `https://img.youtube.com/vi/${song.videoId}/default.jpg`;
 
     document.querySelector('#playlistResults').innerHTML += `
-      <a href="${videoUrl}" target="_blank" class="songRow">
+      <a href="${videoUrl}" target="_blank" class="songRow" onclick='saveRecentlyPlayed(${JSON.stringify(song)}, "calm")'>
       <img class="songThumb" src="${videoThmb}" alt="${song.name} thumbnail">
         <div class="songInfo">
           <h4>${song.name}</h4>
-          <p>${song.artist} • ${song.length}</p>
+          <p>${song.artist}
+            ${song.length ? ` • ${song.length}` : ''}
+          </p>
         </div>
       </a>
     `;
@@ -443,6 +536,7 @@ function saveChaotic() {
 }
 
 function showChaoticUI() {
+  document.querySelector('#mixtapeIntro').style.display = 'none';
   document.querySelector('#playlistResults').innerHTML = '';
   document.querySelector('#playlistResults').innerHTML = '<h2>Mintforge Chaotic Coder Mix</h2>';
   document.querySelector('#dualityIMG').src = 'assets/images/mixtape/ChaoticVibes.png';
@@ -450,25 +544,33 @@ function showChaoticUI() {
   chaoticBtn.classList.add('selected');
   calmBtn.classList.remove('selected');
 
-  chaoticPlaylist.forEach(song => {
-    const videoUrl = `https://www.youtube.com/watch?v=${song.videoId}&list=PLAYLIST_ID&index=${song.index}`;
+  const playlistToRender = chaoticAPIPlaylist ?? chaoticPlaylist;
+
+  playlistToRender.forEach(song => {
+    const videoUrl = `https://www.youtube.com/watch?v=${song.videoId}` + `&list=${chaoticPlaylistId}` + `&index=${song.index}`;
     const videoThmb = `https://img.youtube.com/vi/${song.videoId}/default.jpg`;
 
     document.querySelector('#playlistResults').innerHTML += `
-      <a href="${videoUrl}" target="_blank" class="songRow">
+      <a href="${videoUrl}" target="_blank" class="songRow" onclick='saveRecentlyPlayed(${JSON.stringify(song)}, "chaotic")'>
       <img class="songThumb" src="${videoThmb}" alt="${song.name} thumbnail">
         <div class="songInfo">
           <h4>${song.name}</h4>
-          <p>${song.artist} • ${song.length}</p>
+          <p>${song.artist}
+            ${song.length ? ` • ${song.length}` : ''}
+          </p>
         </div>
       </a>
     `;
   });
 }
 
-
 calmBtn.addEventListener('click', saveCalm);
 chaoticBtn.addEventListener('click', saveChaotic);
+
+
+fetchCalmPlaylist();
+fetchChaoticPlaylist();
+renderRecentlyPlayed();
 
 const savedCoder = localStorage.getItem('coderType');
 const buttons = document.querySelectorAll('.musicButton');
@@ -485,11 +587,33 @@ if (!savedCoder) {
   showChaoticUI();
 }
 
+function renderRecentlyPlayed() {
+  const list = document.querySelector('#recentList');
+  const recent = JSON.parse(localStorage.getItem('recentlyPlayed')) || [];
+
+  list.innerHTML = '';
+
+  if (recent.length === 0) {
+    list.innerHTML = '<li>No songs have been clicked yet</li>';
+    return;
+  }
+
+  recent.forEach(item => {
+    list.innerHTML += `<li><a href="https://www.youtube.com/watch?v=${item.videoId}" target="_blank">
+    ${item.name} - ${item.artist}
+      (Playlist: ${item.playlist})</li>`;
+  });
+}
+
+
+
+
 const resetBTN = document.querySelector('#resetMixtape');
 
 function resetMixtape() {
   localStorage.removeItem('coderType');
 
+  document.querySelector('#mixtapeIntro').style.display = 'block';
   document.querySelector('#playlistResults').innerHTML = '';
   document.querySelector('#playlistResults').innerHTML = '<h2>No Playlist Selected</h2>';
   document.querySelector('#dualityIMG').src = 'assets/images/mixtape/CalmOrChaotic.png';
@@ -503,3 +627,24 @@ function resetMixtape() {
 }
 
 resetBTN.addEventListener('click', resetMixtape); 
+
+
+function saveRecentlyPlayed(song, playlistType) {
+  let recent = JSON.parse(localStorage.getItem('recentlyPlayed')) || [];
+
+  recent = recent.filter(item => item.videoId !== song.videoId);
+
+  recent.push({
+    name: song.name,
+    artist: song.artist,
+    videoId: song.videoId,
+    playlist: playlistType
+  }); 
+
+  if (recent.length > 5) {
+    recent = recent.slice(recent.length - 5);
+  }
+
+  localStorage.setItem('recentlyPlayed', JSON.stringify(recent));
+  renderRecentlyPlayed();
+}
