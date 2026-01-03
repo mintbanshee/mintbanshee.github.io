@@ -939,65 +939,6 @@ footer {
 
 
 
-/* ======= Recent Songs Lightbox ======= */
-
-#recentLightbox {
-  position: fixed;
-  z-index: 200;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,0.85);
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#modalContent {
-  background: #fff;
-  width: 70%;
-  max-width: 900px;
-  padding: 28px;
-  border-radius: 16px;
-  position: relative;
-}
-  #modalContent h2 {
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-align: center;
-}
-#recentSongsList {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.recentSong {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px;
-  border-radius: 10px;
-  background: #f5f7f6;
-  cursor: pointer;
-}
-.recentSong img {
-  width: 60px;
-  border-radius: 6px;
-}
-#closeBtn {
-  position: absolute;
-  top: 12px;
-  right: 20px;
-  font-size: 2.5rem;
-  cursor: pointer;
-  user-select: none;
-}
-
-
-
-
-
 /* ======= starWars ======= */
 
 #projectHero {

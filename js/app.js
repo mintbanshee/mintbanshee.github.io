@@ -482,19 +482,6 @@ if (calmBtn && chaoticBtn) {
   }
 }
 
-function saveRecentlyPlayed(song, playlistType) {
-  const stored = JSON.parse(localStorage.getItem('recentlyPlayed')) || [];
-  const filtered = stored.filter(item => item.videoId !== song.videoId);
-
-  filtered.unshift({...song, playlist: playlistType});
-
-  const trimmed = filtered.slice(0, 3);
-
-  localStorage.setItem('recentlyPlayed', JSON.stringify(trimmed));
-}
-
-
-
 
 function showCalmUI() {
   document.querySelector('#mixtapeIntro').style.display = 'none';
