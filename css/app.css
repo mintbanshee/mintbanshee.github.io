@@ -568,6 +568,23 @@ footer {
   text-align: center;
   padding-bottom: 6rem;
 }
+.designCard {
+  background: rgba(247, 245, 242, 0.25);
+  border: 2px solid var(--mintbanshee-green);
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);  
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18),
+              0 0 16px rgba(125, 176, 146, 0.4);
+  padding: 1.5rem 2rem 1.25rem;
+  width: 80%;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+  .designCard p {
+    max-width: none;
+    margin-bottom: 1rem;
+  }
 #BotaniCuteThumb {
   width: 100%;
   max-width: 360px;      
@@ -594,16 +611,16 @@ footer {
   margin-inline: auto;
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  grid-auto-flow: dense;
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 180px;
-  gap: 1.5rem;  
+  gap: 1.5rem;
 }
 .designProject {
   position: relative;
   text-align: center;
   width: 100%;
   max-width: 260px;
+  justify-self: center;
 }
   .designProject img {
     width: 100%;
@@ -621,17 +638,6 @@ footer {
   .designProject:hover {
     filter: drop-shadow(12px 12px 18px #333);
     cursor: pointer;
-  }
-  .designProjectTall {
-  grid-row: 1 / span 2;
-  grid-column: 4;
-  max-width: 260px;
-  align-self: start;
-  justify-self: center;
-}
-  .designProjectTall img {
-    height: auto !important; 
-    object-fit: cover;
   }
 .backLink {
   display: inline-block;
@@ -1154,6 +1160,7 @@ footer {
   .projectMedia > video {
     width: 400px;
   }
+  
 }
 @media (max-width: 1225px) {
   #welcome h1 {
@@ -1163,13 +1170,14 @@ footer {
     width: 500px;
   }
   #designsRow {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 1210px) {
   #contactMain h3 {
     font-size: 1.4rem;
   }
+
 }
 @media (max-width: 1190px) {
   .codeThumb {
@@ -1179,9 +1187,12 @@ footer {
   .projectMedia > video {
     width: 350px;
   }
-#designMain #featureCard {
-  width: 60%;
-}
+  #designMain #featureCard {
+    width: 60%;
+  }
+  .designCard p {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 1070px) {
   #contactMain h3 {
@@ -1200,6 +1211,12 @@ footer {
   .projectMedia > video {
     width: 300px;
   }
+  .designCard {
+    width: 75%;
+  }
+  #BotaniCuteThumb {
+    width: 300px;
+  }
 }
 @media (max-width: 1040px) {
   #welcome h1 {
@@ -1207,6 +1224,9 @@ footer {
   }
   #projectThumb {
     width: 400px;
+  }
+  .designCard p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 1000px) {
@@ -1281,6 +1301,12 @@ footer {
   }
   .songInfo {
     font-size: 1.2rem;
+  }
+  #designsRow {
+     grid-template-columns: repeat(2, 1fr);
+  }
+  #BotaniCuteThumb {
+    width: 275px;
   }
 }
 @media (max-width: 850px) {
@@ -1578,6 +1604,9 @@ footer {
   .songInfo p {
     font-size: 0.6rem;
   }
+   #designsRow {
+     grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media (max-width: 580px) {
   #dualityIMG {
@@ -1614,6 +1643,18 @@ footer {
   }
   #playlistResults {
     width: 100%;
+  }
+  #BotaniCuteThumb {
+    width: 250px;
+  }
+  .designCard p {
+    font-size: 0.6rem;
+  }
+  .designCard h1 {
+    font-size: 2rem;
+  }
+  .designCard h3 {
+    font-size: 1.3rem;
   }
 }
 @media (max-width: 560px) {
@@ -1663,6 +1704,9 @@ footer {
   }
   .codeCard h2 {
     font-size: 1.2rem;
+  }
+  #BotaniCuteThumb {
+    width: 225px;
   }
 }
 @media (max-width: 510px) {
@@ -1820,7 +1864,15 @@ footer {
   .projectMedia > video {
     width: 200px;
   }
-
+  #BotaniCuteThumb {
+    width: 175px;
+  }
+  #designMain h1 {
+    font-size: 2rem;
+  }
+  #designMain p {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 435px) {
   #aboutWelcome > h1 {
@@ -1878,6 +1930,7 @@ footer {
   .musicButton {
     width: 70px;
   }
+
   
 }
 @media (max-width: 390px) {

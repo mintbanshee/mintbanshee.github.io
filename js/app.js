@@ -33,7 +33,7 @@ const projects = [
     
     UI layout demonstrating flexible product organization, soft visual branding, and a clean shopping experience. Focuses on hierarchy, consistency, and easy browsing for an online retail environment.`,
     img: "assets/images/design/img2.png",
-    link: "https://mintbanshee.github.io/HTML_Assignment_3/"},
+    link: "https://mintbanshee.github.io/LunarLens"},
 
   {name: "Star Wars",
     description: `A themed homepage concept blending entertainment branding with clean UX.
@@ -90,6 +90,15 @@ const projects = [
     Features a handcrafted color palette inspired by mint leaves, twilight skies, and soft enchanted lighting — blending calm contrasts with clear syntax visibility for long, focused coding sessions.`,
     img: "assets/images/design/img10.png",
     link: "midnight.html"},
+
+    {name: "Dewdrop Defenders: A Field Guide",
+    description: `A fully customized WordPress site created as a companion site to a Java game I created.
+    
+    Built using the WordPress.com free plan with custom layout, navigation, responsive styling, and content adaptation.
+    
+    Demonstrates CMS configuration, theme customization, and deployment of a live public site.`,
+    img: "assets/images/design/img11.png",
+    link: "https://dewdropdefenders.wordpress.com/"},
 ]
 
 function showBox(num) {
