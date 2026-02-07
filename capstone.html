@@ -50,44 +50,62 @@
     </div>
   </header>
 
-<div id="lightbox" onclick="hideBox();">
-    <div id="modalContent" onclick="event.stopPropagation()">
-      <div id="modalLeft">
-        <img id="lightboxImage" src="https://placehold.co/500" alt="Project Details Popup">
-      </div>
-      <div id="modalRight">
-        <h2 id="projectName"></h2>
-        <p id="projectDescription"></p>
-        <button id="viewProjectBtn" onclick="viewProject()">View Project</button>
-      </div>
-      <span id="closeBtn" onclick="hideBox()">&times;</span>
+  <div id="welcome">
+    <h1>Capstone Project</h1>
+    <div class="dividerFlair">~ ✧ ~</div>
+    <h1>The Foxglove Tome </h1>
+    <h2>A Digital Sanctuary for Mental Wellness</h2>
+    <h3>The Heart of the Project</h3> 
+    <p>Born from a desire to support those facing mental health struggles, including people close to my heart, The Foxglove Tome is more than a journal. It is a digital sanctuary designed to provide "breathing room" in an often overwhelming digital landscape.</p>
+    <h3>A Space for Reflection</h3>
+    <p>Inspired by the calm and healing nature of a physical garden, the app features a mood tracker that translates emotional check-ins into a visual sanctuary. Instead of sterile charts, the Tome allows users to "plant" flowers in their digital space creating a curated garden that serves as a mirror to their internal world.</p>
+    <h3>The Planned Toolbox</h3>
+    <div id="skillsRow">
+      <span>PHP</span>
+      <span>MySQL</span>
+      <span>VS Code</span>
+      <span>React</span>
+      <span>Adobe Illustrator</span>
+      <span>Bootstrap</span>
+      <span>GitHub</span>
+      <span>Figma</span>
     </div>
-   </div> 
+    <div class="dividerFlair">~ ✧ ~</div>
+    </section>
+    <div id="featureCard">
+      <h1>Progress Updates:</h1>
+      <img id="graphicIcon" src="assets/images/icons/GraphicalDesign_Icon.png" alt="Graphic Design Icon">
+      <div id="featuredMedia">
+        <a href="https://github.com/mintbanshee/FoxgloveTome" class="featureLink" target="_blank">View the Repo</a>
+      </div>
+      <h2>Week 1 - Conceptualization & Wireframing</h2>
+        <p>Completed the proposal document, wireframe and UML Diagram</p>
+          <div id="featuredMedia">
+            <img id="projectThumb" src="assets/images/capstone/FoxgloveTome_Wireframe.png" alt="Website wireframe and UML diagram for The Foxglove Tome project proposal.">
+          </div>
+      <h2>Week 2 - The Logo</h2>
+        <p>Created the logo for The Foxglove Tome using Adobe Illustrator and exported the full package of sizes. Created the database and tables in PHP.</p>
+          <div id="featuredMedia">
+              <img id="projectThumb" src="assets/images/capstone/FoxgloveTome.png" alt="The Foxglove Tome logo, featuring a botanical flower over an open book.">
+          </div>
+      <h2>Week 3 - The Database</h2>
+        <p>Created the GitHub repo, started the folder scaffolding and connected to the database.</p>
+          <div id="featuredMedia">
+            <img id="projectThumb" src="assets/images/capstone/DatabaseRelationships.png" alt="Database relationship diagram showing links between users, garden, and journal entries.">
+          </div>
 
-    <div id="projectHero">
-    <a href="designs.html" class="backLink">Back to Designs Page</a>
-      <h1>Midnight at the Mintforge</h1>
-      <h3>Theme Development · Interface Styling · Personal Branding</h3>
-      <p>A fully customized VS Code theme designed to transform the developer workspace into a cozy, atmospheric environment rooted in personal branding.</p>
-      <p>Midnight at the Mintforge was created to bring a sense of identity, comfort, and aesthetic intention into the tool used every day. The theme blends twilight-inspired hues with the signature Mintforge palette — mint greens, plum-midnights, soft lilacs, and lunar glow accents — producing a coding environment that feels both gentle and focused.</p>
-      <p>This project began as a personal design experiment and evolved into a fully functional VS Code extension installed locally on The Mintforge. Every color was selected intentionally to communicate clarity while staying true to a cozy, whimsical design language.
-        From strings and attributes to punctuation and tags, each syntax element carries its own distinct but harmonious shade.</p>
-      <div class="dividerFlair">~ ✧ ~</div>
-      <p>Highlights Include:<br>
-          • A handcrafted palette designed entirely from scratch<br>
-          • Custom token colorization for syntax groups (strings, attributes, tags, punctuation, comments, keywords)<br>
-          • A midnight-plum editor background and soft contrast gutters for reduced visual fatigue<br>
-          • Local extension packaging and installation to run as a full VS Code theme<br>
-          • Branding integration inspired by the Mintforge universe</p>
-          <p>Midnight at the Mintforge represents the moment where design and development meet — a reminder that tools can be just as expressive as the work created within them.</p>
-      <img id="midnightSS" src="assets/images/design/img10.png" alt="Midnight at the Mintforge Screenshot">
+
+
+      <div id="featuredMedia">
+        <a href="https://github.com/mintbanshee/FoxgloveTome" class="featureLink" target="_blank">View the Repo</a>
+      </div>
+
     </div>
-
   </div>
 
 
   <footer>
-    <div id="footerSocials">
+<div id="footerSocials">
       <a href="https://github.com/mintbanshee" target="_blank" rel="noopener noreferrer">
         <img id="social" src="assets/images/shell/gitHub.png" alt="GitHub"></a>
       <a href="https://www.linkedin.com/in/mintbanshee" target="_blank" rel="noopener noreferrer">
@@ -98,11 +116,12 @@
         <img id="social" src="assets/images/shell/figma.png" alt="Figma"></a>
       <a href="https://codepen.io/mintbanshee" target="_blank" rel="noopener noreferrer">
         <img id="social" src="assets/images/shell/codePen.png" alt="CodePen"></a>
-    </div>
-    <div id="footerText">
-      &copy; 2025 Alexandria McQueen — MintBanshee
-      <br>Crafted with care in VS Code
-    </div>
+</div>
+<div id="footerText">
+  &copy; 2025 Alexandria McQueen — MintBanshee
+  <br>Crafted with care in VS Code
+</div>
+
   </footer>
 
 </body>
