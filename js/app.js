@@ -401,7 +401,7 @@ const chaoticPlaylist = [
 // ====================================================
 // =============== API Assignment ================ 
 
-const youtubeAPIKey = 'AIzaSyBdDFEvo1GjjyFjogZ8HksX7s_HdOxb-T0';
+const youtubeAPIKey = 'AIzaSyARIR4FR0fcygN5gy4NBoUNu0KpS-U1MQM';
 const calmPlaylistId = 'PLO1iWpsX1PjRLFMng8WjkKNSujIjk6TJV';
 const chaoticPlaylistId = 'PLO1iWpsX1PjQji3_hWIpazvyWS7eWN2iy';
 let calmAPIPlaylist = null;
