@@ -943,6 +943,30 @@ footer {
   flex-shrink: 0;
 }
 
+/* ======= Capstone ======= */
+.scrollButtons {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.scroll-btn {
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1.5px solid var(--shadowmint);
+  border-radius: 999px;
+  font-size: 14px;
+  color: #2e004f; /* your deep purple 👀 */
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.scroll-btn:hover {
+  background: var(--moonbeam);
+  color: #2e004f;
+  transform: translateY(-1px);
+}
 
 
 /* ======= starWars ======= */
